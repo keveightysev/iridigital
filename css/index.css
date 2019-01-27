@@ -280,7 +280,15 @@ header {
     border-right: 2.3rem solid #E8E8E8;
   }
 }
-.header ul {
+@media (min-width: 895px) {
+  .header .title {
+    width: 20%;
+  }
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -288,7 +296,7 @@ header {
   padding: 0;
   overflow: hidden;
 }
-.header ul li a {
+.header .menu li a {
   display: block;
   padding: 5px 10px;
   margin: 5px 3rem 0;
@@ -303,8 +311,8 @@ header {
   border-bottom: 5px solid #E8E8E8;
   position: relative;
 }
-.header ul li a:before,
-.header ul li a:after {
+.header .menu li a:before,
+.header .menu li a:after {
   content: '';
   top: 0;
   width: 5px;
@@ -312,36 +320,46 @@ header {
   position: absolute;
   background: #E8E8E8;
 }
-.header ul li a:before {
+.header .menu li a:before {
   left: -5px;
 }
-.header ul li a:after {
+.header .menu li a:after {
   right: -5px;
 }
-.header ul li a:hover {
+.header .menu li a:hover {
   background: #E8E8E8;
   color: #191919;
   transition: color 0.2s linear;
 }
 @media (min-width: 675px) {
-  .header ul li a {
+  .header .menu li a {
     width: 15rem;
     padding: 20px 0;
     margin: 30px 0;
   }
 }
+@media (min-width: 895px) {
+  .header .menu li a {
+    width: 12rem;
+    margin-right: 30px;
+    margin-top: 45px;
+    padding: 15px;
+  }
+}
 @media (min-width: 675px) {
-  .header ul {
+  .header .menu {
     display: flex;
     justify-content: space-around;
     position: static;
     margin: 0 auto;
   }
 }
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+@media (min-width: 895px) {
+  .header .menu {
+    justify-content: flex-end;
+    width: 75%;
+    margin: 0;
+  }
 }
 .header .menu-icon {
   cursor: pointer;
@@ -420,11 +438,10 @@ header {
 @media (min-width: 895px) {
   .header {
     flex-direction: row;
-    align-items: flex-start;
-    align-content: center;
-  }
-  .header .menu {
-    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+    align-content: baseline;
+    flex-wrap: wrap;
   }
 }
 .header .greeting {
@@ -448,6 +465,11 @@ header {
 @media (min-width: 675px) {
   .header .greeting {
     position: static;
+  }
+}
+@media (min-width: 895px) {
+  .header .greeting {
+    margin-top: 40px;
   }
 }
 footer {

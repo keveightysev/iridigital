@@ -41,8 +41,17 @@ header {
                 border-right: 2.3rem solid @white;
             }
         }
+
+        @media @desktop {
+            width: 20%;
+        }
     }
-    ul {
+
+    // menu
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
         position: absolute;
         z-index: 2;
         width: 100%;
@@ -73,6 +82,13 @@ header {
                     padding: 20px 0;
                     margin: 30px 0;
                 }
+
+                @media @desktop {
+                    width: 12rem;
+                    margin-right: 30px;
+                    margin-top: 45px;
+                    padding: 15px;
+                }
             }
         }
         
@@ -82,12 +98,12 @@ header {
             position: static;
             margin: 0 auto;
         }
-    }
-    // menu
-    .menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .2s ease-out;
+
+        @media @desktop {
+            justify-content: flex-end;
+            width: 75%;
+            margin: 0;
+        }
     }
     // menu icon
     .menu-icon {
@@ -176,13 +192,12 @@ header {
         }
     }
 
-    @media (min-width:895px) {
+    @media @desktop {
         flex-direction: row;
-        align-items: flex-start;
-        align-content: center;
-        .menu {
-            margin-left: auto;
-        }
+        justify-content: space-between;
+        align-items: center;
+        align-content: baseline;
+        flex-wrap: wrap;
     }
 
     .greeting {
@@ -207,6 +222,10 @@ header {
 
         @media @tablet {
             position: static;
+        }
+
+        @media @desktop {
+            margin-top: 40px;
         }
     }
 }
