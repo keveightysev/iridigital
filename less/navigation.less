@@ -1,7 +1,7 @@
 header {
     width: 100%;
     height: 100px;
-    background: black;
+    background: @black;
     position: absolute;
     @media @tablet {
         height: 350px;
@@ -11,9 +11,9 @@ header {
 .header {
     width: 100%;
     max-width: 1024px;
-    height: 100px;
+    height: 275px;
     margin: 0 auto;
-    background: linear-gradient(-45deg, @red, @orange, @yellow, @green, @blue, @indigo, @violet), linear-gradient(black, white), url("../img/code-bg.jpg");
+    background: linear-gradient(-45deg, @red, @orange, @yellow, @green, @blue, @indigo, @violet), linear-gradient(@black, @white), url("../img/code-bg.jpg");
     background-size: 700% 700%, cover, cover;
     background-blend-mode: color-burn, color, overlay;
     animation: header-iridescence 60s ease infinite;
@@ -28,9 +28,9 @@ header {
             font-family: "Lucida Console", Monaco, monospace;
             font-size: 4rem;
             font-weight: bold;
-            color: white;
+            color: @white;
             overflow: hidden;
-            border-right: 17pt solid white;
+            border-right: 17pt solid @white;
             white-space: nowrap;
             animation: typing 1150ms steps(20, end) 1s 1 normal both,
             blink 7.25s step-end infinite;
@@ -45,16 +45,19 @@ header {
             a {
                 display: block;
                 text-decoration: none;
-                padding: 10px;
+                padding: 5px 10px;
                 margin: 10px;
                 font-family: "Lucida Console", Monaco, monospace;
                 font-size: 1.5rem;
                 font-weight: bold;
                 text-decoration: none;
-                color: white;
+                text-align: center;
+                color: @white;
+                .pixel-border(@white, 5px);
                 &:hover {
-                    color: lightgrey;
-                    transition: color .5s linear;
+                    background: @white;
+                    color: @black;
+                    transition: color .2s linear;
                 }
                 @media @tablet {
                     padding: 20px;
@@ -77,14 +80,14 @@ header {
         position: relative;
         user-select: none;
         .navicon {
-            background: white;
+            background: @white;
             display: block;
             height: 2px;
             width: 18px;
             position: relative;
             transition: background .2s ease-out;
             &:before, &:after {
-                background: white;
+                background: @white;
                 content: '';
                 display: block;
                 height: 100%;

@@ -1,0 +1,21 @@
+.pixel-border(@color, @size) {
+    border-top: @size solid @color;
+    border-bottom: @size solid @color;
+    position: relative;
+    &:before, &:after {
+        content: '';
+        top: 0;
+        width: @size;
+        height: 100%;
+        position: absolute;
+        background: @color;
+    }
+
+    &:before {
+        left: -@size;
+    }
+
+    &:after {
+        right: -@size;
+    }
+}
