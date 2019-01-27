@@ -9,23 +9,25 @@ header {
 }
 
 .header {
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 1024px;
-    height: 275px;
+    height: 255px;
     margin: 0 auto;
-    background: linear-gradient(-45deg, @red, @orange, @yellow, @green, @blue, @indigo, @violet), linear-gradient(@black, @white), url("../img/code-bg.jpg");
-    background-size: 700% 700%, cover, cover;
+    background: linear-gradient(-45deg, @red, @orange, @yellow, @lightgreen, @lightblue, @lightindigo, @violet), linear-gradient(@black, @white), url("../img/code-bg.jpg");
+    background-size: 1000% 1000%, cover, cover;
     background-blend-mode: color-burn, color, overlay;
     animation: header-iridescence 60s ease infinite;
-
     .title {
         display: block;
         float: left;
         font-size: 2em;
-        padding: 10px 20px;
+        padding: 10px 0 10px 10px;
         margin-top: 15px;
+        margin-right: 0;
         h1 {
-            font-family: "Lucida Console", Monaco, monospace;
+            font-family: @lucida;
             font-size: 4rem;
             font-weight: bold;
             color: @white;
@@ -37,22 +39,25 @@ header {
         }
     }
     ul {
-        margin: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        margin-top: 65px;
         padding: 0;
-        list-style: none;
         overflow: hidden;
         li {
             a {
                 display: block;
                 text-decoration: none;
                 padding: 5px 10px;
-                margin: 10px;
-                font-family: "Lucida Console", Monaco, monospace;
+                margin: 10px 30px;
+                font-family: @lucida;
                 font-size: 1.5rem;
                 font-weight: bold;
                 text-decoration: none;
                 text-align: center;
                 color: @white;
+                background: @black;
                 .pixel-border(@white, 5px);
                 &:hover {
                     background: @white;
@@ -63,6 +68,11 @@ header {
                     padding: 20px;
                 }
             }
+        }
+
+        @media @tablet {
+            position: static;
+            margin: 0 auto;
         }
     }
     // menu
@@ -75,7 +85,7 @@ header {
     .menu-icon {
         cursor: pointer;
         float: right;
-        padding: 28px 5%;
+        padding: 28px 40px;
         margin-top: 12px;
         position: relative;
         user-select: none;
@@ -109,6 +119,7 @@ header {
 
         &:checked {
             ~ .menu {
+                z-index: 10;
                 max-height: 240px;
             }
         }
@@ -135,6 +146,7 @@ header {
     }
 
     @media @tablet {
+        position: static;
         height: 350px;
         display: flex;
         flex-direction: column;
@@ -166,13 +178,28 @@ header {
         }
     }
 
-    @media screen and (min-width: 850px) {
-        #leftsidebar {
-            width: 200px;
-            float: left;
+    .greeting {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-family: @lucida;
+            font-size: 3rem;
+            color: @white;
+            margin: 20px 0;
         }
-        #main { 
-            margin-left: 216px;
+
+        p {
+            font-family: @lucida;
+            font-size: 2rem;
+            color: @white;
+            margin: 20px 0;
+        }
+
+        @media @tablet {
+            position: static;
         }
     }
 }

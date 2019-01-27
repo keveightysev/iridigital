@@ -233,12 +233,14 @@ header {
   }
 }
 .header {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1024px;
-  height: 275px;
+  height: 255px;
   margin: 0 auto;
-  background: linear-gradient(-45deg, #AD2918, #E89A12, #DDCF00, #2A6F1A, #1644BB, #461174, #BD48DB), linear-gradient(#191919, #E8E8E8), url("../img/code-bg.jpg");
-  background-size: 700% 700%, cover, cover;
+  background: linear-gradient(-45deg, #AD2918, #E89A12, #DDCF00, #82B710, #5A82E8, #8E3AD8, #BD48DB), linear-gradient(#191919, #E8E8E8), url("../img/code-bg.jpg");
+  background-size: 1000% 1000%, cover, cover;
   background-blend-mode: color-burn, color, overlay;
   animation: header-iridescence 60s ease infinite;
 }
@@ -246,8 +248,9 @@ header {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 10px 0 10px 10px;
   margin-top: 15px;
+  margin-right: 0;
 }
 .header .title h1 {
   font-family: "Lucida Console", Monaco, monospace;
@@ -260,21 +263,24 @@ header {
   animation: typing 1150ms steps(20, end) 1s 1 normal both, blink 7.25s step-end infinite;
 }
 .header ul {
-  margin: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  margin-top: 65px;
   padding: 0;
-  list-style: none;
   overflow: hidden;
 }
 .header ul li a {
   display: block;
   padding: 5px 10px;
-  margin: 10px;
+  margin: 10px 30px;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   color: #E8E8E8;
+  background: #191919;
   border-top: 5px solid #E8E8E8;
   border-bottom: 5px solid #E8E8E8;
   position: relative;
@@ -304,6 +310,12 @@ header {
     padding: 20px;
   }
 }
+@media (min-width: 585px) {
+  .header ul {
+    position: static;
+    margin: 0 auto;
+  }
+}
 .header .menu {
   clear: both;
   max-height: 0;
@@ -312,7 +324,7 @@ header {
 .header .menu-icon {
   cursor: pointer;
   float: right;
-  padding: 28px 5%;
+  padding: 28px 40px;
   margin-top: 12px;
   position: relative;
   user-select: none;
@@ -345,6 +357,7 @@ header {
   display: none;
 }
 .header .menu-btn:checked ~ .menu {
+  z-index: 10;
   max-height: 240px;
 }
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -362,6 +375,7 @@ header {
 }
 @media (min-width: 585px) {
   .header {
+    position: static;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -392,13 +406,27 @@ header {
     margin-left: auto;
   }
 }
-@media screen and (min-width: 850px) {
-  .header #leftsidebar {
-    width: 200px;
-    float: left;
-  }
-  .header #main {
-    margin-left: 216px;
+.header .greeting {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+}
+.header .greeting h2 {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 3rem;
+  color: #E8E8E8;
+  margin: 20px 0;
+}
+.header .greeting p {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 2rem;
+  color: #E8E8E8;
+  margin: 20px 0;
+}
+@media (min-width: 585px) {
+  .header .greeting {
+    position: static;
   }
 }
 footer {
