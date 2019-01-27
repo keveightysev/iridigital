@@ -137,7 +137,7 @@ html {
     }
   }
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   @keyframes typing {
     from {
       width: 0;
@@ -239,7 +239,7 @@ header {
   background: #191919;
   position: absolute;
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   header {
     height: 350px;
   }
@@ -251,9 +251,9 @@ header {
   max-width: 1024px;
   height: 245px;
   margin: 0 auto;
-  background: linear-gradient(-45deg, #AD2918, #E89A12, #DDCF00, #82B710, #5A82E8, #8E3AD8, #BD48DB), linear-gradient(#191919, #E8E8E8), url("../img/code-bg.jpg");
-  background-size: 1000% 1000%, cover, cover;
-  background-blend-mode: color-burn, color, normal;
+  background: linear-gradient(-45deg, #AD2918, #E89A12, #DDCF00, #82B710, #5A82E8, #8E3AD8, #BD48DB), url("../img/code-bg.jpg");
+  background-size: 1000% 1000%, cover;
+  background-blend-mode: color-burn, normal;
   animation: header-iridescence 60s ease infinite;
 }
 .header .title {
@@ -274,7 +274,7 @@ header {
   white-space: nowrap;
   animation: typing 1150ms steps(20, end) 1s 1 normal both, blink 7.25s step-end infinite;
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   .header .title h1 {
     font-size: 4rem;
     border-right: 2.3rem solid #E8E8E8;
@@ -323,13 +323,17 @@ header {
   color: #191919;
   transition: color 0.2s linear;
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   .header ul li a {
-    padding: 20px;
+    width: 15rem;
+    padding: 20px 0;
+    margin: 30px 0;
   }
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   .header ul {
+    display: flex;
+    justify-content: space-around;
     position: static;
     margin: 0 auto;
   }
@@ -396,19 +400,13 @@ header {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   .header {
     position: static;
     height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
   }
   .header .menu {
     clear: none;
@@ -447,7 +445,7 @@ header {
   color: #E8E8E8;
   margin: 20px 0;
 }
-@media (min-width: 585px) {
+@media (min-width: 675px) {
   .header .greeting {
     position: static;
   }
