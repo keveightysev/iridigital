@@ -127,12 +127,24 @@ table {
 html {
   font-size: 62.5%;
 }
-@keyframes typing {
-  from {
-    width: 0;
+@media (min-width: 100px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 195px;
+    }
   }
-  to {
-    width: 270px;
+}
+@media (min-width: 585px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 270px;
+    }
   }
 }
 @keyframes blink {
@@ -237,11 +249,11 @@ header {
   z-index: 1;
   width: 100%;
   max-width: 1024px;
-  height: 255px;
+  height: 245px;
   margin: 0 auto;
   background: linear-gradient(-45deg, #AD2918, #E89A12, #DDCF00, #82B710, #5A82E8, #8E3AD8, #BD48DB), linear-gradient(#191919, #E8E8E8), url("../img/code-bg.jpg");
   background-size: 1000% 1000%, cover, cover;
-  background-blend-mode: color-burn, color, overlay;
+  background-blend-mode: color-burn, color, normal;
   animation: header-iridescence 60s ease infinite;
 }
 .header .title {
@@ -254,13 +266,19 @@ header {
 }
 .header .title h1 {
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 4rem;
+  font-size: 2.85rem;
   font-weight: bold;
   color: #E8E8E8;
   overflow: hidden;
-  border-right: 17pt solid #E8E8E8;
+  border-right: 1.5rem solid #E8E8E8;
   white-space: nowrap;
   animation: typing 1150ms steps(20, end) 1s 1 normal both, blink 7.25s step-end infinite;
+}
+@media (min-width: 585px) {
+  .header .title h1 {
+    font-size: 4rem;
+    border-right: 2.3rem solid #E8E8E8;
+  }
 }
 .header ul {
   position: absolute;
@@ -273,7 +291,7 @@ header {
 .header ul li a {
   display: block;
   padding: 5px 10px;
-  margin: 10px 30px;
+  margin: 5px 3rem 0;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1.5rem;
   font-weight: bold;
@@ -325,7 +343,7 @@ header {
   cursor: pointer;
   float: right;
   padding: 28px 40px;
-  margin-top: 12px;
+  margin-top: 7px;
   position: relative;
   user-select: none;
 }
@@ -359,6 +377,11 @@ header {
 .header .menu-btn:checked ~ .menu {
   z-index: 10;
   max-height: 240px;
+}
+.header .menu-btn:checked ~ .greeting {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;

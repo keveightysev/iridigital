@@ -13,11 +13,11 @@ header {
     z-index: 1;
     width: 100%;
     max-width: 1024px;
-    height: 255px;
+    height: 245px;
     margin: 0 auto;
     background: linear-gradient(-45deg, @red, @orange, @yellow, @lightgreen, @lightblue, @lightindigo, @violet), linear-gradient(@black, @white), url("../img/code-bg.jpg");
     background-size: 1000% 1000%, cover, cover;
-    background-blend-mode: color-burn, color, overlay;
+    background-blend-mode: color-burn, color, normal;
     animation: header-iridescence 60s ease infinite;
     .title {
         display: block;
@@ -28,14 +28,18 @@ header {
         margin-right: 0;
         h1 {
             font-family: @lucida;
-            font-size: 4rem;
+            font-size: 2.85rem;
             font-weight: bold;
             color: @white;
             overflow: hidden;
-            border-right: 17pt solid @white;
+            border-right: 1.5rem solid @white;
             white-space: nowrap;
             animation: typing 1150ms steps(20, end) 1s 1 normal both,
             blink 7.25s step-end infinite;
+            @media @tablet {
+                font-size: 4rem;
+                border-right: 2.3rem solid @white;
+            }
         }
     }
     ul {
@@ -50,7 +54,7 @@ header {
                 display: block;
                 text-decoration: none;
                 padding: 5px 10px;
-                margin: 10px 30px;
+                margin: 5px 3rem 0;
                 font-family: @lucida;
                 font-size: 1.5rem;
                 font-weight: bold;
@@ -86,7 +90,7 @@ header {
         cursor: pointer;
         float: right;
         padding: 28px 40px;
-        margin-top: 12px;
+        margin-top: 7px;
         position: relative;
         user-select: none;
         .navicon {
@@ -122,8 +126,13 @@ header {
                 z-index: 10;
                 max-height: 240px;
             }
-        }
-        &:checked {
+
+            ~ .greeting {
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s, opacity 0.5s linear;
+            }
+
             ~ .menu-icon {
                 .navicon {
                     background: transparent;
