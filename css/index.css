@@ -215,23 +215,24 @@ p {
   justify-content: space-evenly;
   padding-bottom: 10px;
 }
-.top-icons i {
+.nav-link {
+  color: #E8E8E8;
   transition: 0.25s ease;
   cursor: pointer;
 }
-.top-icons i:first-child:hover {
+.nav-link:first-child:hover {
   color: #AD2918;
   transition: 0.25s ease;
 }
-.top-icons i:nth-child(2):hover {
+.nav-link:nth-child(2):hover {
   color: #2A6F1A;
   transition: 0.25s ease;
 }
-.top-icons i:nth-child(3):hover {
+.nav-link:nth-child(3):hover {
   color: #1644BB;
   transition: 0.25s ease;
 }
-.top-icons i:last-child:hover {
+.nav-link:last-child:hover {
   color: #461174;
   transition: 0.25s ease;
 }
