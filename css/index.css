@@ -172,6 +172,15 @@ p {
   font-size: 2rem;
   font-family: "Source Sans Pro", sans-serif;
 }
+.actual-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
 @keyframes iridescence {
   0% {
     background-position: center;
@@ -191,15 +200,6 @@ p {
   100% {
     background-position: center;
   }
-}
-.actual-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
 }
 .mobile-header {
   color: #E8E8E8;
@@ -241,15 +241,9 @@ main {
   z-index: 100;
   flex: 1 0 auto;
 }
-main section {
-  display: none;
-}
-main .active {
-  display: block;
-}
 main .home {
   padding: 30px 5%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -284,6 +278,9 @@ main .home button {
 main .home button:focus {
   outline: 0;
   border: 1px solid #E8E8E8;
+}
+main .active {
+  display: flex;
 }
 footer {
   width: 100%;
