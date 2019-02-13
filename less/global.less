@@ -12,5 +12,48 @@ html {
 }
 
 body {
+    position: relative;
     height: 100%;
+}
+
+#background {
+    font-family: @lucida;
+    letter-spacing: -1px;
+    color: rgb(73, 73, 73);
+    font-weight: 900;
+    background-color: black;
+    text-align: justify;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    mix-blend-mode: darken;
+    user-select: none;
+    z-index: -900;
+    // display: none;
+}
+
+.iridescent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(@violet, @blue, @green, @orange, @red);
+    background-size: 200% 200%;
+    animation: iridescence 30s ease infinite;
+    z-index: -1000;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: @source;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-family: @source;
+}
+
+p {
+    font-size: 2rem;
+    font-family: @source;
 }
