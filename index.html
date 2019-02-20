@@ -6,74 +6,13 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" async></script>
+    <script src="js/index.js" defer></script>
     <title>iridigital</title>
 </head>
 <body>
-<div class="iridescent"></div>
-<div id="background"> </div>
-<div class="actual-content">
-    <header>
-        <p class="mobile-header">iridigital</p>
-        <nav class="top-icons">
-            <i class="fas fa-home nav-link" data-section="home"></i>
-            <i class="fas fa-user nav-link" data-section="about"></i>
-            <i class="fas fa-folder nav-link"></i>
-            <i class="fas fa-envelope nav-link"></i>
-        </nav>
-    </header>
-    <main>
-        <section class="home" data-section="home">
-            <img src="img/me.png" alt="Photo of Kevin Smith">
-            <h1>Kevin Smith</h1>
-            <h2>Web Developer</h2>
-            <p>iridigital is a portmanteau of "iridescent" and "digital."</p>
-            <p>(kevinsmith.com was already taken)</p>
-            <p>I'm a developer based out of Wisconsin who likes to work with people and build new things.</p>
-            <button>Let's build together</button>
-            <p>or</p>
-            <button>See my work</button>
-        </section>
-        <section class="about active" data-section="about">
-            <h2>About Me</h2>
-            <p>Howdy! Thank you for checking out my portfolio, and I appreciate your being curious enough to read more about me. </p>
-            <h3>Who I Am</h3>
-            <div>
-                <img src="img/me2.jpg" alt="Photo of Kevin Smith">
-                <p>My name is Kevin Smith. I love working with people, learning new things, and travelling. An ideal experience for me is combining all three of those things! I earned my Bachelor of Science in Business management from Western Governor's University in 2016. I started the Full Stack Web & Computer Science track at Lambda School in 2019.</p>
-            </div>
-            <h3 class="about-right">Where I'm From</h3>
-            <div>
-                <img src="img/EauClaire.jpg" alt="Photo of Eau Claire, WI" class="about-left">
-                <p>I grew up and currently live in the small city of Eau Claire, WI, nested near the Northwoods. In 2011, I moved to Chicago and lived there for 5 1/2 years before moving to Virginia Beach in 2016.</p>
-            </div>
-            <h3>What I Do</h3>
-            <div>
-                <p>I worked in customer service for over 10 years. As a "people person," I enjoyed working in that role as it allowed me to collaborate with many different business functions. To pivot into a role that involves building things, I started building web development skills in 2018.</p>
-                <p>In my spare time, I like to practice new skills or play video games.</p>
-            </div>
-        </section>
-    <main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <h2 class="logo">iridigital</h2>
-                <h3>Kevin Smith</h3>
-                <div class="social-icons">
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-twitter-square"></i>
-                    <i class="fab fa-github-square"></i>
-                </div>
-            </div>
-            <nav class="footer-right">
-                <p class="nav-link" data-section="home">Home</p>
-                <p class="nav-link" data-section="about">About Me</p>
-                <p class="nav-link">Portfolio</p>
-                <p class="nav-link">Contact</p>
-            </nav>
-        </div>
-        <p class="copy">&copy; 2019 Kevin Smith</p>
-    </footer>
-</div>    
+    <div class="container"></div> 
+    <div id="backgroundText"></div>
+    <canvas id="backgroundGradient" width="32" height="32"></canvas>
+      
 </body>
 </html>
