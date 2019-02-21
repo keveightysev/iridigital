@@ -52,12 +52,36 @@ run();
 class NavLink {
     constructor(link) {
         this.link = link;
-        this.data = link.dataset.section;
-        this.linkContent = document.querySelector(`.nav-content[data-section=${this.data}]`);
+        this.data = link.dataset.link;
+        this.linkContent = document.querySelector(`.nav-content[data-link=${this.data}]`);
         this.content = new LinkContent(this.linkContent);
-        this.link.addEventListener('click', () => this.content.select());
+        this.closeBtn = document.querySelector(`.close[data-link=${this.data}]`);
+        this.link.addEventListener('click', () => this.selectLink());
+        this.closeBtn.addEventListener('click', () => this.closeContent());
+    }
+
+    closeContent = () => {
+      this.closeBtn.style.display = "none";
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => link.classList.remove('active-link'));
+      links.forEach(link => link.classList.add('nav'));
+      const sections = document.querySelectorAll('.nav-content');
+      sections.forEach(section => section.classList.remove('active'));
+    }
+
+    selectLink = () => {
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => link.classList.remove('active-link'));
+      links.forEach(link => link.classList.add('nav'));
+      const sections = document.querySelectorAll('.nav-content');
+      sections.forEach(section => section.classList.remove('active'));
+      this.link.classList.add('active-link');
+      this.closeBtn.style.display = "block";
+      this.content.select();
     }
 }
+
+
 
 class LinkContent {
     constructor(item) {
@@ -65,8 +89,6 @@ class LinkContent {
     }
 
     select() {
-        const items = document.querySelectorAll('.nav-content');
-        items.forEach(item => item.classList.remove('active'));
         this.item.classList.add('active');
     }
 }

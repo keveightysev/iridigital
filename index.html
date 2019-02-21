@@ -17,14 +17,14 @@
                 <h2>a space on the web for Kevin Smith, web developer</h2>
             </div>
             <nav>
-                <p class="nav-link"><span class="rotate">About</span></p>
-                <p class="nav-link"><span class="rotate">My Work</span></p>
-                <p class="nav-link"><span class="rotate">Contact</span></p>
+                <p class="nav-link active-link" data-link="about"><span class="rotate">About</span></p>
+                <p class="nav-link nav" data-link="work"><span class="rotate">My Work</span></p>
+                <p class="nav-link nav" data-link="contact"><span class="rotate">Contact</span></p>
             </nav>
         </header>
         <main>
-            <section class="about">
-                <span class="close">&#10006;</span>
+            <section class="nav-content about active" data-link="about">
+                <span class="close" data-link="about">&#10006;</span>
                 <img src="img/me.png" alt="Photo of Kevin Smith">
                 <h2>About Me</h2>
                 <p>My name is Kevin Smith, and I am a web developer located in Wisconsin. In 2016, I earned my B.S. in Business Management from <a href="https://www.wgu.edu/" target="_blank">Western Governors University</a>. In 2019, I started the Full Stack Web Development track at <a href="https://lambdaschool.com/" target="_blank">Lambda School</a>.</p>
@@ -57,6 +57,14 @@
                     </tr>
                 </table>
                 <button>View My Portfolio</button>
+            </section>
+            <section class="nav-content work" data-link="work">
+                <span class="close" data-link="work">&#10006;</span>
+                <h2>My Work</h2>
+            </section>
+            <section class="nav-content contact" data-link="contact">
+                <span class="close" data-link="contact">&#10006;</span>
+                <h2>Contact</h2>
             </section>
         </main>
     </div> 
