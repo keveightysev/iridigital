@@ -48,7 +48,7 @@ run();
 // End Gradient
 
 
-
+// Tab functionality
 class NavLink {
     constructor(link) {
         this.link = link;
@@ -81,8 +81,6 @@ class NavLink {
     }
 }
 
-
-
 class LinkContent {
     constructor(item) {
         this.item = item;
@@ -96,3 +94,5 @@ class LinkContent {
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(navLink => new NavLink(navLink));
+
+// End Tabs

@@ -1,5 +1,9 @@
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,13 +21,13 @@
                 <h2>a space on the web for Kevin Smith, web developer</h2>
             </div>
             <nav>
-                <p class="nav-link active-link" data-link="about"><span class="rotate">About</span></p>
+                <p class="nav-link nav" data-link="about"><span class="rotate">About</span></p>
                 <p class="nav-link nav" data-link="work"><span class="rotate">My Work</span></p>
                 <p class="nav-link nav" data-link="contact"><span class="rotate">Contact</span></p>
             </nav>
         </header>
         <main>
-            <section class="nav-content about active" data-link="about">
+            <section class="nav-content about" data-link="about">
                 <span class="close" data-link="about">&#10006;</span>
                 <img src="img/me.png" alt="Photo of Kevin Smith">
                 <h2>About Me</h2>
@@ -67,6 +71,17 @@
                 <h2>Contact</h2>
             </section>
         </main>
+        <footer>
+            <div class="social">
+                <a href="https://github.com/keveightysev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/keveightysev" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>Made with &#129472; in Wisconsin</p>
+                <p>&copy; 2019 Kevin Smith</p>
+            </div>
+        </footer>
     </div> 
     <div id="backgroundText"></div>
     <canvas id="backgroundGradient" width="32" height="32"></canvas>
