@@ -135,6 +135,7 @@ html {
 body {
   position: relative;
   height: 100%;
+  margin: 0 auto;
   overflow: hidden;
 }
 #backgroundText {
@@ -163,11 +164,26 @@ canvas {
   width: 100%;
   height: 100%;
   z-index: 1000;
+  overflow: auto;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 1.6rem;
 }
 .header {
   width: 100%;
   height: 100px;
-  margin-top: 50px;
   background-color: #E8E8E8;
   display: flex;
   flex-direction: column;
@@ -183,6 +199,7 @@ canvas {
 .header h2 {
   font-size: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
   padding: 0 10px;
 }
 @media (min-width: 700px) {
@@ -192,10 +209,16 @@ canvas {
 }
 @media (min-width: 550px) {
   .header {
-    width: 65%;
+    margin-top: 50px;
+    width: 500px;
     max-width: 600px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+  }
+}
+@media (min-width: 550px) and (min-width: 700px) {
+  .header {
+    width: 600px;
   }
 }
 nav {
@@ -246,4 +269,101 @@ nav .nav-link {
     flex-direction: column;
     justify-content: flex-start;
   }
+}
+main {
+  font-family: "Source Sans Pro", sans-serif;
+  position: static;
+  margin: 20px 2%;
+}
+@media (min-width: 550px) {
+  main {
+    margin: 0;
+    position: absolute;
+    width: 415px;
+    top: 160px;
+    left: 85px;
+  }
+}
+@media (min-width: 550px) and (min-width: 700px) {
+  main {
+    width: 515px;
+  }
+}
+.about {
+  background: #E8E8E8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px 5%;
+}
+.about img {
+  width: 50%;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+.about button {
+  background: #191919;
+  color: #E8E8E8;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  margin: 20px;
+}
+.about table {
+  font-size: 1.6rem;
+}
+.about table th {
+  font-weight: 600;
+  padding: 5px;
+}
+.about table i {
+  font-size: 2rem;
+}
+.about table td {
+  padding: 5px;
+  vertical-align: middle;
+}
+.about table td:first-child {
+  text-align: center;
+  border-right: 1px solid #686868;
+}
+.close {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #bababa;
+  transition: color 0.25s ease;
+}
+.close:hover {
+  color: #191919;
+  transition: color 0.25s ease;
+}
+.fa-html5:hover {
+  color: #E34C26;
+  transition: color 0.25s ease;
+}
+.fa-css3:hover {
+  color: #2A4EE2;
+  transition: color 0.25s ease;
+}
+.fa-sass:hover {
+  color: #CE6499;
+  transition: color 0.25s ease;
+}
+.fa-less:hover {
+  color: #1d355C;
+  transition: color 0.25s ease;
+}
+.fa-js:hover {
+  color: #F6DE29;
+  transition: color 0.25s ease;
+}
+.fa-react:hover {
+  color: #61D9FA;
+  transition: color 0.25s ease;
 }

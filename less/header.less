@@ -1,7 +1,6 @@
 .header {
     width: 100%;
     height: 100px;
-    margin-top: 50px;
     background-color: @white;
     display: flex;
     flex-direction: column;
@@ -18,6 +17,7 @@
     h2 {
         font-size: 1.5rem;
         font-family: @source;
+        text-align: center;
         padding: 0 10px;
 
         @media @desktop {
@@ -26,10 +26,15 @@
     }
 
     @media @tablet {
-        width: 65%;
+        margin-top: 50px;
+        width: 500px;
         max-width: 600px;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
+
+        @media @desktop {
+            width: 600px;
+        }
     }
 }
 

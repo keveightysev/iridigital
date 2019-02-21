@@ -1,0 +1,113 @@
+main {
+    font-family: @source;
+    position: static;
+    margin: 20px 2%;
+    
+    @media @tablet {
+        margin: 0;
+        position: absolute;
+        width: 415px;
+        top: 160px;
+        left: 85px;
+
+        @media @desktop {
+            width: 515px;
+        }
+    }
+}
+
+.about {
+    background: @white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px 5%;
+
+    img {
+        width: 50%;
+        border-radius: 50%;
+        margin: 20px 0;
+    }
+
+    button {
+        background: @black;
+        color: @white;
+        border: 1px solid @black;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 1.6rem;
+        margin: 20px;
+    }
+
+    table {
+        font-size: 1.6rem;
+
+        th {
+            font-weight: 600;
+            padding: 5px;
+        }
+
+        i {
+            font-size: 2rem;
+
+            
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: middle;
+        
+            &:first-child {
+                text-align: center;
+                border-right: 1px solid @darkgray;
+            }
+        }
+    }
+}
+
+.close {
+    cursor: pointer;
+    user-select: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: @gray;
+    transition: color .25s ease;
+
+    &:hover {
+        color: @black;
+        transition: color .25s ease;
+    }
+}
+
+.fa-html5:hover {
+    color: #E34C26;
+    transition: color .25s ease;
+}
+
+.fa-css3:hover {
+    color: #2A4EE2;
+    transition: color .25s ease;
+}
+
+.fa-sass:hover {
+    color: #CE6499;
+    transition: color .25s ease;
+}
+
+.fa-less:hover {
+    color: #1d355C;
+    transition: color .25s ease;
+}
+
+.fa-js:hover {
+    color: #F6DE29;
+    transition: color .25s ease;
+}
+
+.fa-react:hover {
+    color: #61D9FA;
+    transition: color .25s ease;
+}
