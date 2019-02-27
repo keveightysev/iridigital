@@ -146,3 +146,49 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(navLink => new NavLink(navLink));
 
 // End Tabs
+
+// Start Carousel
+class Carousel {
+  constructor(carousel) {
+    this.carousel = carousel;
+    this.left = this.carousel.querySelector('.left-btn');
+    this.right = this.carousel.querySelector('.right-btn');
+    this.slides = this.carousel.querySelectorAll('.card');
+    this.index = 0;
+    this.slides[this.index].classList.add('active-card');
+    this.left.addEventListener('click', () => this.moveLeft());
+    this.right.addEventListener('click', () => this.moveRight());
+  }
+
+  moveLeft() {
+    if (this.index === 0) {
+      this.index = this.slides.length - 1;
+    } else {
+      this.index--;
+    }
+    this.slides.forEach((slide, index) => {
+      if (index !== this.index) {
+        slide.classList.remove('active-card');
+      }
+    });
+    this.slides[this.index].classList.add('active-card');
+  }
+
+  moveRight() {
+    if (this.index === this.slides.length - 1) {
+      this.index = 0;
+    } else {
+      this.index++;
+    }
+    this.slides.forEach((slide, index) => {
+      if (index !== this.index) {
+        slide.classList.remove('active-card');
+      }
+    });
+    this.slides[this.index].classList.add('active-card');
+  }
+}
+
+const carousel = new Carousel(document.querySelector('.card-carousel'))
+
+// End Carousel

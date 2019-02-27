@@ -82,40 +82,79 @@ main {
         margin: 10px 0;
     }
 
-    .cards{
-        width: 90%;
+    .card-carousel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
 
-        .card {
-            width: 100%;
-            overflow: hidden;
-            border-radius: 20px;
-            border: 1px solid @darkgray;
-            display: none;
-    
-            h2 {
-                margin: 10px;
-            }
-    
-            h3 {
-                text-align: left;
-                margin: 10px;
-            }
-    
-            p {
-                text-align: left;
-                margin: 10px 10px 20px;
-            }
-    
-            img {
-                margin: 0 auto;
-                width: 420px;
+        .left-btn, .right-btn {
+            cursor: pointer;
+            background: @black;
+            color: @white;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            border: 1px solid @black;
+            border-radius: 50%;
+            
+            &:hover {
+                background: @white;
+                color: @black;
             }
         }
+
+        .left-btn {
+            left: 5px;
+        }
+
+        .right-btn {
+            right: 5px;
+        }
+
+        .cards{
+            width: 90%;
     
-        .active-card {
-            display: block;
+            .card {
+                width: 100%;
+                overflow: hidden;
+                border-radius: 20px;
+                border: 1px solid @darkgray;
+                display: none;
+        
+                h2 {
+                    margin: 10px;
+                }
+        
+                h3 {
+                    text-align: left;
+                    margin: 10px;
+                }
+        
+                p {
+                    text-align: left;
+                    margin: 10px 10px 20px;
+                }
+        
+                img {
+                    margin: 0 auto;
+                    width: 420px;
+                }
+            }
+        
+            .active-card {
+                display: block;
+            }
         }
     }
+
+    
 
     
 }

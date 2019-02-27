@@ -74,12 +74,18 @@ p {
 }
 
 button {
+    cursor: pointer;
     height: auto;
     background: @black;
     color: @white;
     border: 1px solid @black;
+    font-family: @lucida;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1.6rem;
     margin: 20px;
+
+    &:focus {
+        outline: 0;
+    }
 }
