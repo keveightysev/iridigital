@@ -16,7 +16,7 @@ const ctx = bgGradient.getContext('2d');
 
 
 const colors = (x, y, r, g, b) => {
-  ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+  ctx.fillStyle = `rgb(${r},${g},${b})`;
   ctx.fillRect(x, y, 1,1);
 }
 
@@ -53,6 +53,7 @@ class NavLink {
     constructor(link) {
         this.link = link;
         this.data = link.dataset.link;
+
         this.linkContent = document.querySelector(`.nav-content[data-link=${this.data}]`);
         this.content = new LinkContent(this.linkContent);
         this.closeBtn = document.querySelector(`.close[data-link=${this.data}]`);
@@ -60,7 +61,7 @@ class NavLink {
         this.closeBtn.addEventListener('click', () => this.closeContent());
     }
 
-    closeContent = () => {
+    closeContent() {
       this.closeBtn.style.display = "none";
       const links = document.querySelectorAll('.nav-link');
       links.forEach(link => link.classList.remove('active-link'));
@@ -69,15 +70,23 @@ class NavLink {
       sections.forEach(section => section.classList.remove('active'));
     }
 
-    selectLink = () => {
+    selectLink() {
       const links = document.querySelectorAll('.nav-link');
-      links.forEach(link => link.classList.remove('active-link'));
-      links.forEach(link => link.classList.add('nav'));
       const sections = document.querySelectorAll('.nav-content');
-      sections.forEach(section => section.classList.remove('active'));
-      this.link.classList.add('active-link');
-      this.closeBtn.style.display = "block";
-      this.content.select();
+
+      if (this.link.classList.contains('active-link')) {
+        this.closeBtn.style.display = "none";
+        links.forEach(link => link.classList.remove('active-link'));
+        links.forEach(link => link.classList.add('nav'));
+        sections.forEach(section => section.classList.remove('active'));
+      } else {
+        links.forEach(link => link.classList.remove('active-link'));
+        links.forEach(link => link.classList.add('nav'));
+        sections.forEach(section => section.classList.remove('active'));
+        this.link.classList.add('active-link');
+        this.closeBtn.style.display = "block";
+        this.content.select();
+      }
     }
 }
 
@@ -87,7 +96,9 @@ class LinkContent {
     }
 
     select() {
-        this.item.classList.add('active');
+      const linkContent = document.querySelectorAll('.nav-content');
+      linkContent.forEach(link => link.classList.remove('active'));
+      this.item.classList.add('active');
     }
 }
 

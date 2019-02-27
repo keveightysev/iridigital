@@ -21,6 +21,8 @@ main {
 .about {
     background: @white;
     display: none;
+    opacity: 0;
+    transition: opacity .25s ease;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
@@ -28,6 +30,7 @@ main {
 
     img {
         width: 50%;
+        height: auto;
         border-radius: 50%;
         margin: 20px 0;
     }
@@ -43,6 +46,7 @@ main {
     }
 
     table {
+        margin: 20px 0;
         font-size: 1.6rem;
 
         th {
@@ -56,15 +60,25 @@ main {
             
         }
 
-        td {
-            padding: 5px;
-            vertical-align: middle;
-        
-            &:first-child {
-                text-align: center;
-                border-right: 1px solid @darkgray;
+        tr {
+            border-bottom: 1px solid @darkgray;
+
+            &:first-child, &:last-child {
+                border-bottom: none;
+            }
+
+            td {
+                padding: 5px;
+                vertical-align: middle;
+            
+                &:first-child {
+                    text-align: center;
+                    border-right: 1px solid @darkgray;
+                }
             }
         }
+
+        
     }
 }
 
@@ -75,6 +89,58 @@ main {
     align-items: center;
     border-radius: 25px;
     padding: 20px 5%;
+
+    > p {
+        margin: 10px 0;
+    }
+
+    button {
+        height: auto;
+        background: @black;
+        color: @white;
+        border: 1px solid @black;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 1.6rem;
+        margin: 20px;
+    }
+
+    .cards{
+        width: 90%;
+
+        .card {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid @darkgray;
+            display: none;
+    
+            h2 {
+                margin: 10px;
+            }
+    
+            h3 {
+                text-align: left;
+                margin: 10px;
+            }
+    
+            p {
+                text-align: left;
+                margin: 10px 10px 20px;
+            }
+    
+            img {
+                margin: 0 auto;
+                width: 420px;
+            }
+        }
+    
+        .active-card {
+            display: block;
+        }
+    }
+
+    
 }
 
 .contact {
@@ -139,4 +205,6 @@ main {
 
 .active {
     display: flex;
+    opacity: 1;
+    transition: opacity .25s ease;
 }

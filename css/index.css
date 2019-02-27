@@ -330,6 +330,8 @@ main {
 .about {
   background: #E8E8E8;
   display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
   flex-direction: column;
   align-items: center;
   border-radius: 25px;
@@ -337,6 +339,7 @@ main {
 }
 .about img {
   width: 50%;
+  height: auto;
   border-radius: 50%;
   margin: 20px 0;
 }
@@ -350,6 +353,7 @@ main {
   margin: 20px;
 }
 .about table {
+  margin: 20px 0;
   font-size: 1.6rem;
 }
 .about table th {
@@ -359,11 +363,18 @@ main {
 .about table i {
   font-size: 2rem;
 }
-.about table td {
+.about table tr {
+  border-bottom: 1px solid #686868;
+}
+.about table tr:first-child,
+.about table tr:last-child {
+  border-bottom: none;
+}
+.about table tr td {
   padding: 5px;
   vertical-align: middle;
 }
-.about table td:first-child {
+.about table tr td:first-child {
   text-align: center;
   border-right: 1px solid #686868;
 }
@@ -374,6 +385,47 @@ main {
   align-items: center;
   border-radius: 25px;
   padding: 20px 5%;
+}
+.work > p {
+  margin: 10px 0;
+}
+.work button {
+  height: auto;
+  background: #191919;
+  color: #E8E8E8;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  margin: 20px;
+}
+.work .cards {
+  width: 90%;
+}
+.work .cards .card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #686868;
+  display: none;
+}
+.work .cards .card h2 {
+  margin: 10px;
+}
+.work .cards .card h3 {
+  text-align: left;
+  margin: 10px;
+}
+.work .cards .card p {
+  text-align: left;
+  margin: 10px 10px 20px;
+}
+.work .cards .card img {
+  margin: 0 auto;
+  width: 420px;
+}
+.work .cards .active-card {
+  display: block;
 }
 .contact {
   background: #E8E8E8;
@@ -429,6 +481,8 @@ main {
 }
 .active {
   display: flex;
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
 footer {
   width: 100%;
