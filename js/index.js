@@ -53,7 +53,6 @@ class NavLink {
     constructor(link) {
         this.link = link;
         this.data = link.dataset.link;
-
         this.linkContent = document.querySelector(`.nav-content[data-link=${this.data}]`);
         this.content = new LinkContent(this.linkContent);
         this.closeBtn = document.querySelector(`.close[data-link=${this.data}]`);
@@ -61,13 +60,40 @@ class NavLink {
         this.closeBtn.addEventListener('click', () => this.closeContent());
     }
 
+    fadeOut(el) {
+      el.style.opacity = 1;
+      (function fade() {
+        if ((el.style.opacity -= .1) < 0) {
+          el.style.display = 'none';
+          el.classList.add('is-hidden');
+        } else {
+          requestAnimationFrame(fade);
+        }
+      })();
+    }
+
+    fadeIn(el, display){
+      if (el.classList.contains('is-hidden')){
+        el.classList.remove('is-hidden');
+      }
+      el.style.opacity = 0;
+      el.style.display = display || "flex";
+
+      (function fade() {
+        let val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+          el.style.opacity = val;
+          requestAnimationFrame(fade);
+        }
+      })();
+    }
+
     closeContent() {
       this.closeBtn.style.display = "none";
       const links = document.querySelectorAll('.nav-link');
       links.forEach(link => link.classList.remove('active-link'));
       links.forEach(link => link.classList.add('nav'));
-      const sections = document.querySelectorAll('.nav-content');
-      sections.forEach(section => section.classList.remove('active'));
+      this.fadeOut(this.linkContent);
     }
 
     selectLink() {
@@ -78,14 +104,14 @@ class NavLink {
         this.closeBtn.style.display = "none";
         links.forEach(link => link.classList.remove('active-link'));
         links.forEach(link => link.classList.add('nav'));
-        sections.forEach(section => section.classList.remove('active'));
+        this.fadeOut(this.linkContent);
       } else {
         links.forEach(link => link.classList.remove('active-link'));
         links.forEach(link => link.classList.add('nav'));
-        sections.forEach(section => section.classList.remove('active'));
+        sections.forEach(section => {section.classList.add('is-hidden'); section.style.display = "none";});
         this.link.classList.add('active-link');
         this.closeBtn.style.display = "block";
-        this.content.select();
+        this.fadeIn(this.linkContent);
       }
     }
 }
@@ -93,6 +119,19 @@ class NavLink {
 class LinkContent {
     constructor(item) {
         this.item = item;
+    }
+
+    fadeOut() {
+      this.item.style.opacity = 1;
+      console.log(this.item.style.opacity);
+      (function fade() {
+        if ((this.item.style.opacity -= .1) < 0) {
+          this.item.style.display = 'none';
+          this.item.classList.add('is-hidden');
+        } else {
+          requestAnimationFrame(fade);
+        }
+      })();
     }
 
     select() {

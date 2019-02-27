@@ -28,7 +28,7 @@
             </nav>
         </header>
         <main>
-            <section class="nav-content about" data-link="about">
+            <section class="nav-content about is-hidden" data-link="about">
                 <span class="close" data-link="about">&#10006;</span>
                 <img src="img/me.png" alt="Photo of Kevin Smith">
                 <h2>About Me</h2>
@@ -67,7 +67,7 @@
                 </table>
                 <button>View My Portfolio</button>
             </section>
-            <section class="nav-content work active" data-link="work">
+            <section class="nav-content work is-hidden" data-link="work">
                 <span class="close" data-link="work">&#10006;</span>
                 <h2>My Work</h2>
                 <p>Check out some of the apps and static websites that I've built! I would love to hear any feedback you have, or if you're interested in working with me.</p>
@@ -88,9 +88,15 @@
                 </div>
                 <button>Send a Message</button>
             </section>
-            <section class="nav-content contact" data-link="contact">
+            <section class="nav-content contact is-hidden" data-link="contact">
                 <span class="close" data-link="contact">&#10006;</span>
                 <h2>Contact</h2>
+                <form action="https://formspree.io/kevin@iridigital.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <textarea name="message" placeholder="Your message..."></textarea>
+                    <button>Send!</button>
+                </form>
             </section>
         </main>
         <footer>
@@ -98,6 +104,7 @@
                 <a href="https://github.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="https://twitter.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:kevin@iridigital.com"><i class="far fa-envelope"></i></a>
             </div>
             <div class="footer-text">
                 <p>Made with &#129472; in Wisconsin</p>

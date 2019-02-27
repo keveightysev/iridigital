@@ -20,9 +20,7 @@ main {
 
 .about {
     background: @white;
-    display: none;
-    opacity: 0;
-    transition: opacity .25s ease;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
@@ -33,16 +31,6 @@ main {
         height: auto;
         border-radius: 50%;
         margin: 20px 0;
-    }
-
-    button {
-        background: @black;
-        color: @white;
-        border: 1px solid @black;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 1.6rem;
-        margin: 20px;
     }
 
     table {
@@ -84,7 +72,7 @@ main {
 
 .work {
     background: @white;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
@@ -92,17 +80,6 @@ main {
 
     > p {
         margin: 10px 0;
-    }
-
-    button {
-        height: auto;
-        background: @black;
-        color: @white;
-        border: 1px solid @black;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 1.6rem;
-        margin: 20px;
     }
 
     .cards{
@@ -145,11 +122,47 @@ main {
 
 .contact {
     background: @white;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
     padding: 20px 5%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        input {
+            width: 70%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid @gray;
+            padding: 5px;
+            font-family: @source;
+            margin-bottom: 10px;
+
+            &:focus {
+                outline: 0;
+                border: 1px solid @black;
+            }
+        }
+
+        textarea {
+            width: 70%;
+            border-radius: 5px;
+            border: 1px solid @gray;
+            padding: 5px;
+            font-family: @source;
+            margin-bottom: 10px;
+
+            &:focus {
+                outline: 0;
+                border: 1px solid @black;
+            }
+        }
+    }
 }
 
 .close {
@@ -203,8 +216,6 @@ main {
     transition: color .25s ease;
 }
 
-.active {
-    display: flex;
-    opacity: 1;
-    transition: opacity .25s ease;
+.is-hidden {
+    display: none;
 }

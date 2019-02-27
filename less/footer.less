@@ -57,29 +57,33 @@ footer {
         a {
             color: @black;
             text-decoration: none;
+            transition: color .25s ease;
 
             @media @tablet {
                 color: @white;
                 font-size: 1.5rem;
                 margin-right: 10px;
             }
-
-            &:hover {
-                color: #0077B5;
-            }
-
-            &:first-child {
-                &:hover {
-                    color: #6E5494
-                }
-            }
-
-            &:last-child {
-                &:hover {
-                    color: #1DA1F2
-                }
-            }
         }
     }
+}
 
+.fa-github:hover {
+    color: #6E5494;
+    transition: color .25s ease;
+}
+
+.fa-linkedin:hover {
+    color: #0077B5;
+    transition: color .25s ease;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+    transition: color .25s ease;
+}
+
+.fa-envelope:hover {
+    color: @red;
+    transition: color .25s ease;
 }
