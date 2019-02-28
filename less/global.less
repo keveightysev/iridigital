@@ -83,9 +83,21 @@ button {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1.6rem;
-    margin: 20px;
+    margin: 30px 0;
 
     &:focus {
         outline: 0;
+    }
+}
+
+a {
+    color: @gray;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .25s ease;
+
+    &:hover {
+        color: @darkgray;
+        text-decoration: underline;
     }
 }

@@ -167,6 +167,14 @@ main {
     border-radius: 25px;
     padding: 20px 5%;
 
+    .social {
+        width: 70%;
+        font-size: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 30px 0;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -190,6 +198,7 @@ main {
 
         textarea {
             width: 70%;
+            height: 60px;
             border-radius: 5px;
             border: 1px solid @gray;
             padding: 5px;
@@ -252,6 +261,11 @@ main {
 
 .fa-react:hover {
     color: #61D9FA;
+    transition: color .25s ease;
+}
+
+.fa-git:hover {
+    color: #EF4F33;
     transition: color .25s ease;
 }
 

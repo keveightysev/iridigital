@@ -196,10 +196,20 @@ button {
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 1.6rem;
-  margin: 20px;
+  margin: 30px 0;
 }
 button:focus {
   outline: 0;
+}
+a {
+  color: #bababa;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+a:hover {
+  color: #686868;
+  text-decoration: underline;
 }
 .header {
   width: 100%;
@@ -463,6 +473,13 @@ main {
   border-radius: 25px;
   padding: 20px 5%;
 }
+.contact .social {
+  width: 70%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
 .contact form {
   display: flex;
   flex-direction: column;
@@ -484,6 +501,7 @@ main {
 }
 .contact form textarea {
   width: 70%;
+  height: 60px;
   border-radius: 5px;
   border: 1px solid #bababa;
   padding: 5px;
@@ -536,6 +554,10 @@ main {
 }
 .fa-react:hover {
   color: #61D9FA;
+  transition: color 0.25s ease;
+}
+.fa-git:hover {
+  color: #EF4F33;
   transition: color 0.25s ease;
 }
 .is-hidden {

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@keveightysev" />
+    <meta property="og:url" content="http://www.iridigital.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="iridigital" />
+    <meta property="og:description" content="A space on the web for Kevin Smith, web developer" />
+    <meta property="og:image" content="http://http://www.iridigital.com/img/ogphoto.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -33,7 +40,7 @@
                 <img src="img/me.png" alt="Photo of Kevin Smith">
                 <h2>About Me</h2>
                 <p>My name is Kevin Smith, and I am a web developer located in Wisconsin. In 2016, I earned my B.S. in Business Management from <a href="https://www.wgu.edu/" target="_blank">Western Governors University</a>. In 2019, I started the Full Stack Web Development track at <a href="https://lambdaschool.com/" target="_blank">Lambda School</a>.</p>
-                <button>Check out my work!</button>
+                <button class="to-work">Check out my work!</button>
                 <h3>Tech I've Had the Pleasure of Working With</h3>
                 <table>
                     <tr>
@@ -65,13 +72,14 @@
                         <td>Big fan of that git flow!</td>
                     </tr>
                 </table>
-                <button>View My Portfolio</button>
+                <button class="to-work">View My Portfolio</button>
             </section>
-            <section class="nav-content work" data-link="work">
+            <section class="nav-content work is-hidden" data-link="work">
                 <span class="close" data-link="work">&#10006;</span>
                 <h2>My Work</h2>
                 <p>Check out some of the apps and static websites that I've built! I would love to hear any feedback you have, or if you're interested in working with me.</p>
-                <button>Contact Me</button>
+                <p><a href="https://github.com/keveightysev" target="_blank"rel="noopener noreferrer">Check out my GitHub repositories</a></p>
+                <button class="to-contact">Contact Me</button>
                 <div class="card-carousel">
                     <div class="left-btn"><i class="fas fa-chevron-left"></i></div>
                     <div class="cards">
@@ -90,16 +98,21 @@
                     </div>
                     <div class="right-btn"><i class="fas fa-chevron-right"></i></div>
                 </div>
-                <button>Send a Message</button>
+                <button class="to-contact">Send a Message</button>
             </section>
-            <section class="nav-content contact is-hidden" data-link="contact">
+            <section class="nav-content contact" data-link="contact">
                 <span class="close" data-link="contact">&#10006;</span>
                 <h2>Contact</h2>
+                <p>I get a rush of dopamine every time I receive a contact. Please give this to me. Shoot me a message on social media or by using the form below.</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                </div>
                 <form action="https://formspree.io/kevin@iridigital.com" method="POST">
                     <input type="text" name="name" placeholder="Your Name">
                     <input type="email" name="email" placeholder="Email Address">
                     <textarea name="message" placeholder="Your message..."></textarea>
-                    <button>Send!</button>
+                    <button>Send Message</button>
                 </form>
             </section>
         </main>
@@ -108,7 +121,7 @@
                 <a href="https://github.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="https://twitter.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:kevin@iridigital.com"><i class="far fa-envelope"></i></a>
+                <a href="mailto:kevin@iridigital.com" target="blank" rel="noopener no referrer"><i class="far fa-envelope"></i></a>
             </div>
             <div class="footer-text">
                 <p>Made with &#129472; in Wisconsin</p>

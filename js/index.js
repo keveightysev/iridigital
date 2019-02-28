@@ -54,10 +54,39 @@ class NavLink {
         this.link = link;
         this.data = link.dataset.link;
         this.linkContent = document.querySelector(`.nav-content[data-link=${this.data}]`);
-        this.content = new LinkContent(this.linkContent);
         this.closeBtn = document.querySelector(`.close[data-link=${this.data}]`);
         this.link.addEventListener('click', () => this.selectLink());
         this.closeBtn.addEventListener('click', () => this.closeContent());
+        this.toContactBtn = document.querySelectorAll('.to-contact');
+        this.toContactBtn.forEach(btn => btn.addEventListener('click', () => this.toContact()));
+        this.toWorkBtn = document.querySelectorAll('.to-work');
+        this.toWorkBtn.forEach(btn => btn.addEventListener('click', () => this.toWork()));
+    }
+
+    toContact() {
+      this.closeBtn.style.display = "none";
+      this.link.classList.remove('active-link');
+      this.link.classList.add('nav');
+      this.fadeOut(this.linkContent);
+      const contactClose = document.querySelector('.close[data-link="contact"]')
+      const contactContent = document.querySelector('.nav-content[data-link="contact"]')
+      const contactLink = document.querySelector('.nav-link[data-link="contact"]')
+      contactLink.classList.add('active-link');
+      contactClose.style.display = "block";
+      setTimeout(() => {this.fadeIn(contactContent)}, 145);
+    }
+
+    toWork() {
+      this.closeBtn.style.display = "none";
+      this.link.classList.remove('active-link');
+      this.link.classList.add('nav');
+      this.fadeOut(this.linkContent);
+      const workClose = document.querySelector('.close[data-link="work"]')
+      const workContent = document.querySelector('.nav-content[data-link="work"]')
+      const workLink = document.querySelector('.nav-link[data-link="work"]')
+      workLink.classList.add('active-link');
+      workClose.style.display = "block";
+      setTimeout(() => {this.fadeIn(workContent)}, 145);
     }
 
     fadeOut(el) {
@@ -113,31 +142,6 @@ class NavLink {
         this.closeBtn.style.display = "block";
         this.fadeIn(this.linkContent);
       }
-    }
-}
-
-class LinkContent {
-    constructor(item) {
-        this.item = item;
-    }
-
-    fadeOut() {
-      this.item.style.opacity = 1;
-      console.log(this.item.style.opacity);
-      (function fade() {
-        if ((this.item.style.opacity -= .1) < 0) {
-          this.item.style.display = 'none';
-          this.item.classList.add('is-hidden');
-        } else {
-          requestAnimationFrame(fade);
-        }
-      })();
-    }
-
-    select() {
-      const linkContent = document.querySelectorAll('.nav-content');
-      linkContent.forEach(link => link.classList.remove('active'));
-      this.item.classList.add('active');
     }
 }
 
