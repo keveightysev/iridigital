@@ -1,103 +1,104 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*:before, *:after {
-    box-sizing: border-box;
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    height: 100%;
+  font-size: 62.5%;
+  height: 100%;
 }
 
 body {
-    position: relative;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 #backgroundText {
-    position: absolute;
-    font-family: @lucida;
-    letter-spacing: -1px;
-    color: rgb(77, 77, 77);
-    font-weight: 900;
-    background-color: black;
-    text-align: justify;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    mix-blend-mode: multiply;
-    user-select: none;
-    // z-index: -100;
-    top: 0;
-    left: 0;
+  position: absolute;
+  font-family: @lucida;
+  letter-spacing: -1px;
+  color: rgb(77, 77, 77);
+  font-weight: 900;
+  background-color: black;
+  text-align: justify;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  user-select: none;
+  // z-index: -100;
+  top: 0;
+  left: 0;
 }
 
 canvas {
-    width: 100%;
-    height: 100%;
-    z-index: -1000;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
 }
 
 .container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
-    font-family: @lucida;
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-family: @lucida;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 h3 {
-    font-family: @lucida;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-align: center;
+  font-family: @lucida;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 p {
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1.3;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.3;
 }
 
 button {
-    cursor: pointer;
-    height: auto;
-    background: @black;
-    color: @white;
-    border: 1px solid @black;
-    font-family: @lucida;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 1.6rem;
-    margin: 30px 0;
+  cursor: pointer;
+  height: auto;
+  background: @black;
+  color: @white;
+  border: 1px solid @black;
+  font-family: @lucida;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  margin: 30px 0;
 
-    &:focus {
-        outline: 0;
-    }
+  &:focus {
+    outline: 0;
+  }
 }
 
 a {
-    color: @gray;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all .25s ease;
+  color: @gray;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.25s ease;
 
-    &:hover {
-        color: @darkgray;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: @darkgray;
+    text-decoration: underline;
+  }
 }

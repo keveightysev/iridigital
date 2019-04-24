@@ -140,7 +140,7 @@ body {
 }
 #backgroundText {
   position: absolute;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   letter-spacing: -1px;
   color: #4d4d4d;
   font-weight: 900;
@@ -169,13 +169,13 @@ canvas {
   flex-direction: column;
 }
 h2 {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 h3 {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -190,9 +190,9 @@ button {
   cursor: pointer;
   height: auto;
   background: #191919;
-  color: #E8E8E8;
+  color: #e8e8e8;
   border: 1px solid #191919;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 1.6rem;
@@ -214,7 +214,7 @@ a:hover {
 .header {
   width: 100%;
   height: 100px;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,13 +224,13 @@ a:hover {
 .header h1 {
   margin-top: 10px;
   font-size: 4rem;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   letter-spacing: -0.3rem;
   font-weight: 700;
 }
 .header h2 {
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   padding: 0 10px;
 }
@@ -257,19 +257,27 @@ nav {
   width: 100%;
   max-width: 600px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-top: 1px solid #191919;
+  height: 65px;
+}
+@media (min-width: 550px) {
+  nav {
+    height: auto;
+  }
 }
 nav .nav {
   cursor: pointer;
   font-size: 2rem;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   text-align: center;
-  width: 33%;
-  background-color: #E8E8E8;
+  width: 31%;
+  height: 45px;
+  background-color: #e8e8e8;
   padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: margin 0.25s ease-out;
 }
 @media (min-width: 550px) {
   nav .nav {
@@ -279,7 +287,7 @@ nav .nav {
     height: 150px;
     margin: 10px 0 0;
     padding: 20px 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     display: flex;
     justify-content: flex-end;
@@ -298,13 +306,12 @@ nav .nav {
 nav .active-link {
   cursor: pointer;
   font-size: 2rem;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   text-align: center;
-  width: 33%;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-top: 20px;
+  transition: margin 0.25s ease-out;
 }
 @media (min-width: 550px) {
   nav .active-link {
@@ -332,9 +339,10 @@ nav .active-link {
   }
 }
 main {
-  font-family: "Source Sans Pro", sans-serif;
-  position: static;
-  margin: 20px 2%;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  margin: 0 2% 20px;
+  top: 15px;
   flex: 1 0 auto;
 }
 @media (min-width: 550px) {
@@ -353,7 +361,7 @@ main {
   }
 }
 .about {
-  background: #E8E8E8;
+  background: #e8e8e8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,34 +374,20 @@ main {
   border-radius: 50%;
   margin: 20px 0;
 }
-.about table {
+.about .icons {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
   margin: 20px 0;
-  font-size: 1.6rem;
+  justify-content: space-evenly;
 }
-.about table th {
-  font-weight: 600;
-  padding: 5px;
-}
-.about table i {
-  font-size: 2rem;
-}
-.about table tr {
-  border-bottom: 1px solid #686868;
-}
-.about table tr:first-child,
-.about table tr:last-child {
-  border-bottom: none;
-}
-.about table tr td {
-  padding: 5px;
-  vertical-align: middle;
-}
-.about table tr td:first-child {
-  text-align: center;
-  border-right: 1px solid #686868;
+.about .icons i,
+.about .icons span {
+  font-size: 4rem;
+  margin: 10px;
 }
 .work {
-  background: #E8E8E8;
+  background: #e8e8e8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,7 +407,7 @@ main {
 .work .card-carousel .right-btn {
   cursor: pointer;
   background: #191919;
-  color: #E8E8E8;
+  color: #e8e8e8;
   height: 40px;
   width: 40px;
   display: flex;
@@ -428,7 +422,7 @@ main {
 }
 .work .card-carousel .left-btn:hover,
 .work .card-carousel .right-btn:hover {
-  background: #E8E8E8;
+  background: #e8e8e8;
   color: #191919;
 }
 .work .card-carousel .left-btn {
@@ -466,7 +460,7 @@ main {
   display: block;
 }
 .contact {
-  background: #E8E8E8;
+  background: #e8e8e8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -492,7 +486,7 @@ main {
   border-radius: 5px;
   border: 1px solid #bababa;
   padding: 5px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 10px;
 }
 .contact form input:focus {
@@ -505,7 +499,7 @@ main {
   border-radius: 5px;
   border: 1px solid #bababa;
   padding: 5px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 10px;
 }
 .contact form textarea:focus {
@@ -518,7 +512,7 @@ main {
   font-size: 2rem;
   position: absolute;
   right: 25px;
-  top: 175px;
+  top: 20px;
   color: #bababa;
   transition: color 0.25s ease;
 }
@@ -533,31 +527,31 @@ main {
   }
 }
 .fa-html5:hover {
-  color: #E34C26;
+  color: #e34c26;
   transition: color 0.25s ease;
 }
 .fa-css3:hover {
-  color: #2A4EE2;
+  color: #2a4ee2;
   transition: color 0.25s ease;
 }
 .fa-sass:hover {
-  color: #CE6499;
+  color: #ce6499;
   transition: color 0.25s ease;
 }
 .fa-less:hover {
-  color: #1d355C;
+  color: #1d355c;
   transition: color 0.25s ease;
 }
 .fa-js:hover {
-  color: #F6DE29;
+  color: #f6de29;
   transition: color 0.25s ease;
 }
 .fa-react:hover {
-  color: #61D9FA;
+  color: #61d9fa;
   transition: color 0.25s ease;
 }
 .fa-git:hover {
-  color: #EF4F33;
+  color: #ef4f33;
   transition: color 0.25s ease;
 }
 .is-hidden {
@@ -567,7 +561,7 @@ footer {
   width: 100%;
   height: 100px;
   flex-shrink: 0;
-  background: #E8E8E8;
+  background: #e8e8e8;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -585,13 +579,13 @@ footer {
   }
 }
 footer p {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.8rem;
   margin: 5px;
 }
 @media (min-width: 550px) {
   footer p {
-    color: #E8E8E8;
+    color: #e8e8e8;
     font-size: 1.2rem;
   }
   footer p:first-child::after {
@@ -624,21 +618,21 @@ footer .social a {
 }
 @media (min-width: 550px) {
   footer .social a {
-    color: #E8E8E8;
+    color: #e8e8e8;
     font-size: 1.5rem;
     margin-right: 10px;
   }
 }
 .fa-github:hover {
-  color: #6E5494;
+  color: #6e5494;
   transition: color 0.25s ease;
 }
 .fa-linkedin:hover {
-  color: #0077B5;
+  color: #0077b5;
   transition: color 0.25s ease;
 }
 .fa-twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
   transition: color 0.25s ease;
 }
 .fa-envelope:hover {

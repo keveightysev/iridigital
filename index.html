@@ -1,136 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@keveightysev" />
     <meta property="og:url" content="http://www.iridigital.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="iridigital" />
-    <meta property="og:description" content="A space on the web for Kevin Smith, web developer" />
-    <meta property="og:image" content="http://http://www.iridigital.com/img/ogphoto.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+    <meta
+      property="og:description"
+      content="A space on the web for Kevin Smith, web developer"
+    />
+    <meta
+      property="og:image"
+      content="http://http://www.iridigital.com/img/ogphoto.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
     <script src="js/index.js" defer></script>
     <title>iridigital</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div class="header">
-                <h1>iridigital</h1>
-                <h2>a space on the web for Kevin Smith, web developer</h2>
+      <header>
+        <div class="header">
+          <h1>iridigital</h1>
+          <h2>a space on the web for Kevin Smith, web developer</h2>
+        </div>
+        <nav>
+          <p class="nav-link nav" data-link="about">
+            <span class="rotate">About</span>
+          </p>
+          <p class="nav-link nav" data-link="work">
+            <span class="rotate">My Work</span>
+          </p>
+          <p class="nav-link nav" data-link="contact">
+            <span class="rotate">Contact</span>
+          </p>
+        </nav>
+      </header>
+      <main>
+        <section class="nav-content about" data-link="about">
+          <span class="close" data-link="about">&#10006;</span>
+          <img src="img/me.png" alt="Photo of Kevin Smith" />
+          <h2>About Me</h2>
+          <p>
+            My name is Kevin Smith, and I am a web developer located in
+            Wisconsin. In 2016, I earned my B.S. in Business Management from
+            <a href="https://www.wgu.edu/" target="_blank"
+              >Western Governors University</a
+            >. In 2019, I started the Full Stack Web Development track at
+            <a href="https://lambdaschool.com/" target="_blank">Lambda School</a
+            >.
+          </p>
+          <button class="to-work">Check out my work!</button>
+          <h3>Tech I've Had the Pleasure of Working With</h3>
+          <div class="icons">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-docker-plain colored"></i>
+            <i class="devicon-express-original colored"></i>
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-github-plain colored"></i>
+            <i class="devicon-heroku-original colored"></i>
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-illustrator-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-less-plain-wordmark colored"></i>
+            <i class="devicon-nodejs-plain colored"></i>
+            <i class="devicon-photoshop-plain colored"></i>
+            <i class="devicon-postgresql-plain colored"></i>
+            <i class="devicon-react-original colored"></i>
+            <i class="devicon-sass-original colored"></i>
+            <span><&#128133;></span>
+          </div>
+          <h3>...and more!</h3>
+
+          <button class="to-work">View My Portfolio</button>
+        </section>
+        <section class="nav-content work is-hidden" data-link="work">
+          <span class="close" data-link="work">&#10006;</span>
+          <h2>My Work</h2>
+          <p>
+            Check out some of the apps and static websites that I've built! I
+            would love to hear any feedback you have, or if you're interested in
+            working with me.
+          </p>
+          <p>
+            <a
+              href="https://github.com/keveightysev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Check out my GitHub repositories</a
+            >
+          </p>
+          <button class="to-contact">Contact Me</button>
+          <div class="card-carousel">
+            <div class="left-btn"><i class="fas fa-chevron-left"></i></div>
+            <div class="cards">
+              <div class="card active-card" data-slide="1">
+                <img
+                  src="img/patternss.gif"
+                  alt="Animated demo of Patternss website"
+                />
+                <h2>
+                  <a
+                    href="https://patternss.netlify.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Patternss</a
+                  >
+                </h2>
+                <h3>Tech Used: <i class="fab fa-react"></i></h3>
+                <p>
+                  Patternss is an app that I made to generate CSS code for
+                  patterned backgrounds. The app lets you modify the pattern and
+                  see a live preview. I had a lot of fun making it!
+                </p>
+              </div>
+              <div class="card" data-slide="2">
+                <img src="img/gsd.gif" alt="Animated demo of GSD website" />
+                <h2>
+                  <a
+                    href="https://kevins-task-list.netlify.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GSD</a
+                  >
+                </h2>
+                <h3>Tech Used: <i class="fab fa-react"></i></h3>
+                <p>
+                  GSD is the first React app that I made. The quintessential
+                  To-Do List. It was a great start into the React world, and
+                  really helped with understanding the basics.
+                </p>
+              </div>
             </div>
-            <nav>
-                <p class="nav-link nav" data-link="about"><span class="rotate">About</span></p>
-                <p class="nav-link nav" data-link="work"><span class="rotate">My Work</span></p>
-                <p class="nav-link nav" data-link="contact"><span class="rotate">Contact</span></p>
-            </nav>
-        </header>
-        <main>
-            <section class="nav-content about is-hidden" data-link="about">
-                <span class="close" data-link="about">&#10006;</span>
-                <img src="img/me.png" alt="Photo of Kevin Smith">
-                <h2>About Me</h2>
-                <p>My name is Kevin Smith, and I am a web developer located in Wisconsin. In 2016, I earned my B.S. in Business Management from <a href="https://www.wgu.edu/" target="_blank">Western Governors University</a>. In 2019, I started the Full Stack Web Development track at <a href="https://lambdaschool.com/" target="_blank">Lambda School</a>.</p>
-                <button class="to-work">Check out my work!</button>
-                <h3>Tech I've Had the Pleasure of Working With</h3>
-                <table>
-                    <tr>
-                        <th>Tech</th>
-                        <th>What I love about it</th>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-html5"></i></td>
-                        <td>It's easy and laying it out makes sense.</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-css3"></i></td>
-                        <td>I &#128150; working with CSS</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-sass"></i> <br> <i class="fab fa-less"></i></td>
-                        <td>Makes styling a cinch!</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-js"></i></td>
-                        <td>JavaScript lets you do anything!</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-react"></i></td>
-                        <td>React components make it fun to design functional web apps.</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fab fa-git"></i></td>
-                        <td>Big fan of that git flow!</td>
-                    </tr>
-                </table>
-                <button class="to-work">View My Portfolio</button>
-            </section>
-            <section class="nav-content work is-hidden" data-link="work">
-                <span class="close" data-link="work">&#10006;</span>
-                <h2>My Work</h2>
-                <p>Check out some of the apps and static websites that I've built! I would love to hear any feedback you have, or if you're interested in working with me.</p>
-                <p><a href="https://github.com/keveightysev" target="_blank"rel="noopener noreferrer">Check out my GitHub repositories</a></p>
-                <button class="to-contact">Contact Me</button>
-                <div class="card-carousel">
-                    <div class="left-btn"><i class="fas fa-chevron-left"></i></div>
-                    <div class="cards">
-                        <div class="card active-card" data-slide="1">
-                            <img src="img/patternss.gif" alt="Animated demo of Patternss website">
-                            <h2><a href="https://patternss.netlify.com/" target="_blank" rel="noopener noreferrer">Patternss</a></h2>
-                            <h3>Tech Used: <i class="fab fa-react"></i></h3>
-                            <p>Patternss is an app that I made to generate CSS code for patterned backgrounds. The app lets you modify the pattern and see a live preview. I had a lot of fun making it!</p>
-                        </div>
-                        <div class="card" data-slide="2">
-                            <img src="img/gsd.gif" alt="Animated demo of GSD website">
-                            <h2><a href="https://kevins-task-list.netlify.com/" target="_blank" rel="noopener noreferrer">GSD</a></h2>
-                            <h3>Tech Used: <i class="fab fa-react"></i></h3>
-                            <p>GSD is the first React app that I made. The quintessential To-Do List. It was a great start into the React world, and really helped with understanding the basics.</p>
-                        </div>
-                    </div>
-                    <div class="right-btn"><i class="fas fa-chevron-right"></i></div>
-                </div>
-                <button class="to-contact">Send a Message</button>
-            </section>
-            <section class="nav-content contact" data-link="contact">
-                <span class="close" data-link="contact">&#10006;</span>
-                <h2>Contact</h2>
-                <p>I get a rush of dopamine every time I receive a contact. Please give this to me. Shoot me a message on social media or by using the form below.</p>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                </div>
-                <form action="https://formspree.io/kevin@iridigital.com" method="POST">
-                    <input type="text" name="name" placeholder="Your Name">
-                    <input type="email" name="email" placeholder="Email Address">
-                    <textarea name="message" placeholder="Your message..."></textarea>
-                    <button>Send Message</button>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <div class="social">
-                <a href="https://github.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/keveightysev/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/keveightysev" target="_blank"rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:kevin@iridigital.com" target="blank" rel="noopener no referrer"><i class="far fa-envelope"></i></a>
-            </div>
-            <div class="footer-text">
-                <p>Made with &#129472; in Wisconsin</p>
-                <p>&copy; 2019 Kevin Smith</p>
-            </div>
-        </footer>
-    </div> 
+            <div class="right-btn"><i class="fas fa-chevron-right"></i></div>
+          </div>
+          <button class="to-contact">Send a Message</button>
+        </section>
+        <section class="nav-content contact is-hidden" data-link="contact">
+          <span class="close" data-link="contact">&#10006;</span>
+          <h2>Contact</h2>
+          <p>
+            I get a rush of dopamine every time I receive a contact. Please give
+            this to me. Shoot me a message on social media or by using the form
+            below.
+          </p>
+          <div class="social">
+            <a
+              href="https://www.linkedin.com/in/keveightysev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/keveightysev"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+          <form
+            action="https://formspree.io/kevin@iridigital.com"
+            method="POST"
+          >
+            <input type="text" name="name" placeholder="Your Name" />
+            <input type="email" name="email" placeholder="Email Address" />
+            <textarea name="message" placeholder="Your message..."></textarea>
+            <button>Send Message</button>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <div class="social">
+          <a
+            href="https://github.com/keveightysev"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/keveightysev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/keveightysev"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="mailto:kevin@iridigital.com"
+            target="blank"
+            rel="noopener no referrer"
+            ><i class="far fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footer-text">
+          <p>Made with &#129472; in Wisconsin</p>
+          <p>&copy; 2019 Kevin Smith</p>
+        </div>
+      </footer>
+    </div>
     <div id="backgroundText"></div>
     <canvas id="backgroundGradient" width="32" height="32"></canvas>
-      
-</body>
+  </body>
 </html>

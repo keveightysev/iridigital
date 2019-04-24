@@ -1,274 +1,249 @@
 main {
-    font-family: @source;
-    position: static;
-    margin: 20px 2%;
-    flex: 1 0 auto;
-    
-    @media @tablet {
-        margin: 0;
-        position: absolute;
-        width: 415px;
-        top: 160px;
-        left: 85px;
-        padding-bottom: 100px;
+  font-family: @source;
+  position: relative;
+  margin: 0 2% 20px;
+  top: 15px;
+  flex: 1 0 auto;
 
-        @media @desktop {
-            width: 515px;
-        }
+  @media @tablet {
+    margin: 0;
+    position: absolute;
+    width: 415px;
+    top: 160px;
+    left: 85px;
+    padding-bottom: 100px;
+
+    @media @desktop {
+      width: 515px;
     }
+  }
 }
 
 .about {
-    background: @white;
+  background: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 20px 5%;
+
+  img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 0;
+  }
+
+  .icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-    padding: 20px 5%;
-
-    img {
-        width: 50%;
-        height: auto;
-        border-radius: 50%;
-        margin: 20px 0;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-evenly;
+    i,
+    span {
+      font-size: 4rem;
+      margin: 10px;
     }
-
-    table {
-        margin: 20px 0;
-        font-size: 1.6rem;
-
-        th {
-            font-weight: 600;
-            padding: 5px;
-        }
-
-        i {
-            font-size: 2rem;
-
-            
-        }
-
-        tr {
-            border-bottom: 1px solid @darkgray;
-
-            &:first-child, &:last-child {
-                border-bottom: none;
-            }
-
-            td {
-                padding: 5px;
-                vertical-align: middle;
-            
-                &:first-child {
-                    text-align: center;
-                    border-right: 1px solid @darkgray;
-                }
-            }
-        }
-
-        
-    }
+  }
 }
 
 .work {
-    background: @white;
+  background: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 20px 5%;
+
+  > p {
+    margin: 10px 0;
+  }
+
+  .card-carousel {
+    position: relative;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-    padding: 20px 5%;
+    justify-content: space-around;
 
-    > p {
-        margin: 10px 0;
+    .left-btn,
+    .right-btn {
+      cursor: pointer;
+      background: @black;
+      color: @white;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      border: 1px solid @black;
+      border-radius: 50%;
+
+      &:hover {
+        background: @white;
+        color: @black;
+      }
     }
 
-    .card-carousel {
-        position: relative;
+    .left-btn {
+      left: 5px;
+    }
+
+    .right-btn {
+      right: 5px;
+    }
+
+    .cards {
+      width: 90%;
+
+      .card {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid @darkgray;
+        display: none;
 
-        .left-btn, .right-btn {
-            cursor: pointer;
-            background: @black;
-            color: @white;
-            height: 40px;
-            width: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            border: 1px solid @black;
-            border-radius: 50%;
-            
-            &:hover {
-                background: @white;
-                color: @black;
-            }
+        h2 {
+          margin: 10px;
         }
 
-        .left-btn {
-            left: 5px;
+        h3 {
+          text-align: left;
+          margin: 10px;
         }
 
-        .right-btn {
-            right: 5px;
+        p {
+          text-align: left;
+          margin: 10px 10px 20px;
         }
 
-        .cards{
-            width: 90%;
-    
-            .card {
-                width: 100%;
-                overflow: hidden;
-                border-radius: 20px;
-                border: 1px solid @darkgray;
-                display: none;
-        
-                h2 {
-                    margin: 10px;
-                }
-        
-                h3 {
-                    text-align: left;
-                    margin: 10px;
-                }
-        
-                p {
-                    text-align: left;
-                    margin: 10px 10px 20px;
-                }
-        
-                img {
-                    margin: 0 auto;
-                    width: 420px;
-                }
-            }
-        
-            .active-card {
-                display: block;
-            }
+        img {
+          margin: 0 auto;
+          width: 420px;
         }
+      }
+
+      .active-card {
+        display: block;
+      }
     }
-
-    
-
-    
+  }
 }
 
 .contact {
-    background: @white;
+  background: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 20px 5%;
+
+  .social {
+    width: 70%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
-    padding: 20px 5%;
+    width: 100%;
 
-    .social {
-        width: 70%;
-        font-size: 3rem;
-        display: flex;
-        justify-content: space-evenly;
-        margin: 30px 0;
+    input {
+      width: 70%;
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid @gray;
+      padding: 5px;
+      font-family: @source;
+      margin-bottom: 10px;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid @black;
+      }
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        
-        input {
-            width: 70%;
-            height: 30px;
-            border-radius: 5px;
-            border: 1px solid @gray;
-            padding: 5px;
-            font-family: @source;
-            margin-bottom: 10px;
+    textarea {
+      width: 70%;
+      height: 60px;
+      border-radius: 5px;
+      border: 1px solid @gray;
+      padding: 5px;
+      font-family: @source;
+      margin-bottom: 10px;
 
-            &:focus {
-                outline: 0;
-                border: 1px solid @black;
-            }
-        }
-
-        textarea {
-            width: 70%;
-            height: 60px;
-            border-radius: 5px;
-            border: 1px solid @gray;
-            padding: 5px;
-            font-family: @source;
-            margin-bottom: 10px;
-
-            &:focus {
-                outline: 0;
-                border: 1px solid @black;
-            }
-        }
+      &:focus {
+        outline: 0;
+        border: 1px solid @black;
+      }
     }
+  }
 }
 
 .close {
-    cursor: pointer;
-    user-select: none;
-    font-size: 2rem;
-    position: absolute;
-    right: 25px;
-    top: 175px;
-    color: @gray;
-    transition: color .25s ease;
+  cursor: pointer;
+  user-select: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  color: @gray;
+  transition: color 0.25s ease;
 
-    &:hover {
-        color: @black;
-        transition: color .25s ease;
-    }
+  &:hover {
+    color: @black;
+    transition: color 0.25s ease;
+  }
 
-    @media @tablet {
-        right: 20px;
-        top: 20px;
-    }
+  @media @tablet {
+    right: 20px;
+    top: 20px;
+  }
 }
 
 .fa-html5:hover {
-    color: #E34C26;
-    transition: color .25s ease;
+  color: #e34c26;
+  transition: color 0.25s ease;
 }
 
 .fa-css3:hover {
-    color: #2A4EE2;
-    transition: color .25s ease;
+  color: #2a4ee2;
+  transition: color 0.25s ease;
 }
 
 .fa-sass:hover {
-    color: #CE6499;
-    transition: color .25s ease;
+  color: #ce6499;
+  transition: color 0.25s ease;
 }
 
 .fa-less:hover {
-    color: #1d355C;
-    transition: color .25s ease;
+  color: #1d355c;
+  transition: color 0.25s ease;
 }
 
 .fa-js:hover {
-    color: #F6DE29;
-    transition: color .25s ease;
+  color: #f6de29;
+  transition: color 0.25s ease;
 }
 
 .fa-react:hover {
-    color: #61D9FA;
-    transition: color .25s ease;
+  color: #61d9fa;
+  transition: color 0.25s ease;
 }
 
 .fa-git:hover {
-    color: #EF4F33;
-    transition: color .25s ease;
+  color: #ef4f33;
+  transition: color 0.25s ease;
 }
 
 .is-hidden {
-    display: none;
+  display: none;
 }

@@ -1,89 +1,89 @@
 footer {
-    width: 100%;
-    height: 100px;
-    flex-shrink: 0;
-    background: @white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+  background: @white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media @tablet {
+    flex-shrink: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 50px;
+    background: @black;
+    border-top-right-radius: 0;
+    border-top-left-radius: 25px;
+  }
+
+  p {
+    font-family: @source;
+    font-size: 1.8rem;
+    margin: 5px;
+
     @media @tablet {
-        flex-shrink: none;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 300px;
-        height: 50px;
-        background: @black;
-        border-top-right-radius: 0;
-        border-top-left-radius: 25px;
+      color: @white;
+      font-size: 1.2rem;
+
+      &:first-child {
+        &::after {
+          content: '|';
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-text {
+    @media @tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .social {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+
+    @media @tablet {
+      margin: 10px 0 0;
+      justify-content: center;
     }
 
-    p {
-        font-family: @source;
-        font-size: 1.8rem;
-        margin: 5px;
+    a {
+      color: @black;
+      text-decoration: none;
+      transition: color 0.25s ease;
 
-        @media @tablet {
-            color: @white;
-            font-size: 1.2rem;
-
-            &:first-child{
-                &::after {
-                    content: '|';
-                    margin-left: 10px;
-                }
-            }
-        }
+      @media @tablet {
+        color: @white;
+        font-size: 1.5rem;
+        margin-right: 10px;
+      }
     }
-
-    .footer-text {
-        @media @tablet{
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    .social {
-        font-size: 3rem;
-        display: flex;
-        justify-content: space-evenly;
-        margin: 10px;
-
-        @media @tablet {
-            margin: 10px 0 0;
-            justify-content: center;
-        }
-
-        a {
-            color: @black;
-            text-decoration: none;
-            transition: color .25s ease;
-
-            @media @tablet {
-                color: @white;
-                font-size: 1.5rem;
-                margin-right: 10px;
-            }
-        }
-    }
+  }
 }
 
 .fa-github:hover {
-    color: #6E5494;
-    transition: color .25s ease;
+  color: #6e5494;
+  transition: color 0.25s ease;
 }
 
 .fa-linkedin:hover {
-    color: #0077B5;
-    transition: color .25s ease;
+  color: #0077b5;
+  transition: color 0.25s ease;
 }
 
 .fa-twitter:hover {
-    color: #1DA1F2;
-    transition: color .25s ease;
+  color: #1da1f2;
+  transition: color 0.25s ease;
 }
 
 .fa-envelope:hover {
-    color: @red;
-    transition: color .25s ease;
+  color: @red;
+  transition: color 0.25s ease;
 }
