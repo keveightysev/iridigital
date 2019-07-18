@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-144095959-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-144095959-1');
+    </script>
+
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@keveightysev" />
     <meta property="og:url" content="http://www.iridigital.com" />
@@ -10,9 +25,12 @@
       property="og:description"
       content="A space on the web for Kevin Smith, web developer"
     />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="565" />
     <meta
       property="og:image"
-      content="http://http://www.iridigital.com/img/ogphoto.png"
+      content="http://www.iridigital.com/img/ogphoto.png"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -59,7 +77,7 @@
         </nav>
       </header>
       <main>
-        <section class="nav-content about" data-link="about">
+        <section class="nav-content about is-hidden" data-link="about">
           <span class="close" data-link="about">&#10006;</span>
           <img src="img/me.png" alt="Photo of Kevin Smith" />
           <h2>About Me</h2>
@@ -73,25 +91,35 @@
             >.
           </p>
           <button class="to-work">Check out my work!</button>
-          <h3>Tech I've Had the Pleasure of Working With</h3>
+          <h3>Tech/Tools That I Work With Often</h3>
           <div class="icons">
-            <i class="devicon-bootstrap-plain colored"></i>
-            <i class="devicon-css3-plain colored"></i>
-            <i class="devicon-docker-plain colored"></i>
-            <i class="devicon-express-original colored"></i>
-            <i class="devicon-git-plain colored"></i>
-            <i class="devicon-github-plain colored"></i>
-            <i class="devicon-heroku-original colored"></i>
-            <i class="devicon-html5-plain colored"></i>
-            <i class="devicon-illustrator-plain colored"></i>
-            <i class="devicon-javascript-plain colored"></i>
             <i class="devicon-less-plain-wordmark colored"></i>
-            <i class="devicon-nodejs-plain colored"></i>
-            <i class="devicon-photoshop-plain colored"></i>
-            <i class="devicon-postgresql-plain colored"></i>
-            <i class="devicon-react-original colored"></i>
+            <img src="img/icons/lastpass.png" alt="LastPass logo" />
+            <img src="img/icons/javascript.png" alt="JavaScript logo" />
+            <img src="img/icons/trello.png" alt="Trello logo" />
+            <img src="img/icons/twilio.png" alt="Twilio logo" />
+            <img src="img/icons/coffeescript.png" alt="CoffeeScript logo" />
             <i class="devicon-sass-original colored"></i>
-            <span><&#128133;></span>
+            <img src="img/icons/postgresql.png" alt="PostgreSQL logo" />
+            <i class="devicon-express-original colored"></i>
+            <img src="img/icons/heroku.png" alt="Heroku logo" />
+            <img src="img/icons/stackoverflow.png" alt="Stack Overflow logo" />
+            <img src="img/icons/mongodb.png" alt="MongoDB logo" />
+            <i class="devicon-react-original colored"></i>
+            <i class="devicon-meteor-plain-wordmark colored"></i>
+            <img src="img/icons/stripe.png" alt="Stripe logo" />
+            <img src="img/icons/css3.png" alt="CSS3 logo logo" />
+            <img src="img/icons/slack.png" alt="Slack logo" />
+            <img src="img/icons/firebase.png" alt="Firebase logo" />
+            <img
+              src="img/icons/styledcomponents.png"
+              alt="Styled Components logo"
+            />
+            <img src="img/icons/github.png" alt="GitHub logo" />
+            <img src="img/icons/nodejs.png" alt="Node.js logo" />
+            <img src="img/icons/html5.png" alt="HTML5 logo" />
+            <img src="img/icons/git.png" alt="Git logo" />
+            <i class="devicon-typescript-plain colored"></i>
           </div>
           <h3>...and more!</h3>
 
@@ -118,41 +146,201 @@
             <div class="left-btn"><i class="fas fa-chevron-left"></i></div>
             <div class="cards">
               <div class="card active-card" data-slide="1">
-                <img
-                  src="img/patternss.gif"
-                  alt="Animated demo of Patternss website"
-                />
-                <h2>
+                <div class="card-wrapper">
+                  <div class="img-wrapper">
+                    <img
+                      src="img/recaller.gif"
+                      alt="Animated demo of Recaller website"
+                    />
+                  </div>
+                  <h2>
+                    <a
+                      href="https://recaller-14a1f.firebaseapp.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >ReCaller</a
+                    >
+                  </h2>
+                  <div class="tech-used">
+                    <h3>
+                      Tech Used:
+                    </h3>
+                    <div>
+                      <i class="fab fa-react"></i>&nbsp;<img
+                        src="img/icons/styledcomponents.png"
+                        alt="Styled Components logo"
+                      />&nbsp;<img
+                        src="img/icons/firebase.png"
+                        alt="Firebase logo"
+                      />&nbsp;<img
+                        src="img/icons/nodejs.png"
+                        alt="Node.js logo"
+                      />&nbsp;<i class="devicon-express-original colored"></i
+                      >&nbsp;<img
+                        src="img/icons/twilio.png"
+                        alt="Twilio logo"
+                      />&nbsp;<img
+                        src="img/icons/stripe.png"
+                        alt="Stripe logo"
+                      />
+                    </div>
+                  </div>
+                  <p>
+                    ReCaller was a 5-week capstone project with Lambda School. I
+                    worked on a team with four other developers, and we built
+                    this app from the ground up.
+                  </p>
                   <a
-                    href="https://patternss.netlify.com/"
+                    href="https://github.com/labs12-mom-caller/Front-End"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Patternss</a
+                    >GitHub Repo</a
                   >
-                </h2>
-                <h3>Tech Used: <i class="fab fa-react"></i></h3>
-                <p>
-                  Patternss is an app that I made to generate CSS code for
-                  patterned backgrounds. The app lets you modify the pattern and
-                  see a live preview. I had a lot of fun making it!
-                </p>
+                </div>
               </div>
               <div class="card" data-slide="2">
-                <img src="img/gsd.gif" alt="Animated demo of GSD website" />
-                <h2>
+                <div class="card-wrapper">
+                  <div class="img-wrapper">
+                    <img
+                      src="img/graffiti.gif"
+                      alt="Animated demo of Graffiti Wall website"
+                    />
+                  </div>
+                  <h2>
+                    <a
+                      href="https://graffiti-wall.netlify.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Graffiti Wall</a
+                    >
+                  </h2>
+                  <div class="tech-used">
+                    <h3>Tech Used:</h3>
+                    <div>
+                      <i class="fab fa-react"></i>&nbsp;<img
+                        src="img/icons/styledcomponents.png"
+                        alt="Styled Components logo"
+                      />
+                    </div>
+                  </div>
+                  <p>
+                    The Internet Graffiti Wall is a side project that I've been
+                    working on to get a better understanding of the Canvas API.
+                  </p>
                   <a
-                    href="https://kevins-task-list.netlify.com/"
+                    href="https://github.com/keveightysev/graffiti"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >GSD</a
+                    >GitHub Repo</a
                   >
-                </h2>
-                <h3>Tech Used: <i class="fab fa-react"></i></h3>
-                <p>
-                  GSD is the first React app that I made. The quintessential
-                  To-Do List. It was a great start into the React world, and
-                  really helped with understanding the basics.
-                </p>
+                </div>
+              </div>
+              <div class="card" data-slide="3">
+                <div class="card-wrapper">
+                  <div class="img-wrapper">
+                    <img
+                      src="img/productqueue.gif"
+                      alt="Animated demo of Product Queue website"
+                    />
+                  </div>
+                  <h2>
+                    <a
+                      href="https://productqueue.netlify.com//"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Product Queue</a
+                    >
+                  </h2>
+                  <div class="tech-used">
+                    <h3>Tech Used:</h3>
+                    <div>
+                      <img
+                        src="img/icons/nodejs.png"
+                        alt="Node.js logo"
+                      />&nbsp;<i class="devicon-express-original colored"></i
+                      >&nbsp;<img
+                        src="img/icons/postgresql.png"
+                        alt="PostgreSQL logo"
+                      />&nbsp;<i class="devicon-react-original colored"></i>
+                    </div>
+                  </div>
+                  <p>
+                    Build week project where I was primarily responsible for
+                    building the back end. Also worked on React app.
+                  </p>
+                  <a
+                    href="https://github.com/build-415-productqueue/backend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                </div>
+              </div>
+              <div class="card" data-slide="4">
+                <div class="card-wrapper">
+                  <div class="img-wrapper">
+                    <img
+                      src="img/onboarding.gif"
+                      alt="Animated demo of FlexTogether Onboarding website"
+                    />
+                  </div>
+                  <h2>
+                    <a
+                      href="https://kevins-task-list.netlify.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Onboarding App</a
+                    >
+                  </h2>
+                  <div class="tech-used">
+                    <h3>Tech Used:</h3>
+                    <div>
+                      <i class="fab fa-react"></i>
+                    </div>
+                  </div>
+                  <p>
+                    An onboarding app for FlextTogether's beta users, built
+                    during one of Lambda's build weeks.
+                  </p>
+                  <a
+                    href="https://github.com/keveightysev/React-Todo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                </div>
+              </div>
+              <div class="card" data-slide="4">
+                <div class="card-wrapper">
+                  <div class="img-wrapper">
+                    <img src="img/gsd.gif" alt="Animated demo of GSD website" />
+                  </div>
+                  <h2>
+                    <a
+                      href="https://kevins-task-list.netlify.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GSD</a
+                    >
+                  </h2>
+                  <div class="tech-used">
+                    <h3>Tech Used:</h3>
+                    <div>
+                      <i class="fab fa-react"></i>
+                    </div>
+                  </div>
+                  <p>
+                    GSD is the first React app that I made. The quintessential
+                    To-Do List. It was a great start into the React world, and
+                    really helped with understanding the basics.
+                  </p>
+                  <a
+                    href="https://github.com/keveightysev/React-Todo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                </div>
               </div>
             </div>
             <div class="right-btn"><i class="fas fa-chevron-right"></i></div>

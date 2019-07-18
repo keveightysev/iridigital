@@ -39,11 +39,17 @@ main {
     width: 90%;
     flex-wrap: wrap;
     margin: 20px 0;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
     i,
     span {
       font-size: 4rem;
       margin: 10px;
+    }
+
+    img {
+      border-radius: 0;
+      width: 40px;
     }
   }
 }
@@ -106,24 +112,62 @@ main {
         border-radius: 20px;
         border: 1px solid @darkgray;
         display: none;
+        height: 600px;
 
-        h2 {
-          margin: 10px;
-        }
+        .card-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          .tech-used {
+            display: flex;
+            align-items: center;
 
-        h3 {
-          text-align: left;
-          margin: 10px;
-        }
+            & > div {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
 
-        p {
-          text-align: left;
-          margin: 10px 10px 20px;
-        }
+              i {
+                font-size: 2.5rem;
+              }
+              img {
+                width: 25px;
+              }
+            }
 
-        img {
-          margin: 0 auto;
-          width: 420px;
+            h3 {
+              text-align: left;
+              margin: 10px;
+            }
+          }
+
+          h2 {
+            margin: 10px;
+          }
+
+          p {
+            height: 75px;
+            text-align: left;
+            margin: 10px 10px 10px;
+          }
+
+          .img-wrapper {
+            height: 50%;
+            overflow: hidden;
+            border-bottom: 1px solid @darkgray;
+            width: 100%;
+            img {
+              margin: 0 auto;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          & > a {
+            font-size: 2rem;
+            margin: 0 10px 20px;
+            text-align: center;
+          }
         }
       }
 

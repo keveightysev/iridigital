@@ -196,7 +196,7 @@ button {
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 1.6rem;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 button:focus {
   outline: 0;
@@ -379,12 +379,17 @@ main {
   width: 90%;
   flex-wrap: wrap;
   margin: 20px 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
 .about .icons i,
 .about .icons span {
   font-size: 4rem;
   margin: 10px;
+}
+.about .icons img {
+  border-radius: 0;
+  width: 40px;
 }
 .work {
   background: #e8e8e8;
@@ -440,21 +445,56 @@ main {
   border-radius: 20px;
   border: 1px solid #686868;
   display: none;
+  height: 600px;
 }
-.work .card-carousel .cards .card h2 {
-  margin: 10px;
+.work .card-carousel .cards .card .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
-.work .card-carousel .cards .card h3 {
+.work .card-carousel .cards .card .card-wrapper .tech-used {
+  display: flex;
+  align-items: center;
+}
+.work .card-carousel .cards .card .card-wrapper .tech-used > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work .card-carousel .cards .card .card-wrapper .tech-used > div i {
+  font-size: 2.5rem;
+}
+.work .card-carousel .cards .card .card-wrapper .tech-used > div img {
+  width: 25px;
+}
+.work .card-carousel .cards .card .card-wrapper .tech-used h3 {
   text-align: left;
   margin: 10px;
 }
-.work .card-carousel .cards .card p {
-  text-align: left;
-  margin: 10px 10px 20px;
+.work .card-carousel .cards .card .card-wrapper h2 {
+  margin: 10px;
 }
-.work .card-carousel .cards .card img {
+.work .card-carousel .cards .card .card-wrapper p {
+  height: 75px;
+  text-align: left;
+  margin: 10px 10px 10px;
+}
+.work .card-carousel .cards .card .card-wrapper .img-wrapper {
+  height: 50%;
+  overflow: hidden;
+  border-bottom: 1px solid #686868;
+  width: 100%;
+}
+.work .card-carousel .cards .card .card-wrapper .img-wrapper img {
   margin: 0 auto;
-  width: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+.work .card-carousel .cards .card .card-wrapper > a {
+  font-size: 2rem;
+  margin: 0 10px 20px;
+  text-align: center;
 }
 .work .card-carousel .cards .active-card {
   display: block;
