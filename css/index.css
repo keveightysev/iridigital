@@ -368,11 +368,16 @@ main {
   border-radius: 25px;
   padding: 20px 5%;
 }
-.about img {
+.about picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about picture > img {
   width: 50%;
   height: auto;
   border-radius: 50%;
-  margin: 20px 0;
+  margin: 20px;
 }
 .about .icons {
   display: flex;
@@ -480,15 +485,14 @@ main {
   text-align: left;
   margin: 10px 10px 10px;
 }
-.work .card-carousel .cards .card .card-wrapper .img-wrapper {
+.work .card-carousel .cards .card .card-wrapper .vid-wrapper {
   height: 50%;
   overflow: hidden;
   border-bottom: 1px solid #686868;
   width: 100%;
 }
-.work .card-carousel .cards .card .card-wrapper .img-wrapper img {
+.work .card-carousel .cards .card .card-wrapper .vid-wrapper video {
   margin: 0 auto;
-  width: 100%;
   object-fit: cover;
 }
 .work .card-carousel .cards .card .card-wrapper > a {

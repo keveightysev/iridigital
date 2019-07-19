@@ -25,12 +25,12 @@
       property="og:description"
       content="A space on the web for Kevin Smith, web developer"
     />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:width" content="1080" />
     <meta property="og:image:height" content="565" />
     <meta
       property="og:image"
-      content="http://www.iridigital.com/img/ogphoto.png"
+      content="http://www.iridigital.com/assets/images/ogphoto.webp"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -79,7 +79,11 @@
       <main>
         <section class="nav-content about is-hidden" data-link="about">
           <span class="close" data-link="about">&#10006;</span>
-          <img src="img/me.png" alt="Photo of Kevin Smith" />
+          <picture>
+              <source srcset="assets/images/me.webp" type="image/webp">
+              <source srcset="assets/images/me.png" type="image/png">
+              <img src="assets/images/me.png" alt="Kevin Smith" />
+          </picture>
           <h2>About Me</h2>
           <p>
             My name is Kevin Smith, and I am a web developer located in
@@ -94,31 +98,34 @@
           <h3>Tech/Tools That I Work With Often</h3>
           <div class="icons">
             <i class="devicon-less-plain-wordmark colored"></i>
-            <img src="img/icons/lastpass.png" alt="LastPass logo" />
-            <img src="img/icons/javascript.png" alt="JavaScript logo" />
-            <img src="img/icons/trello.png" alt="Trello logo" />
-            <img src="img/icons/twilio.png" alt="Twilio logo" />
-            <img src="img/icons/coffeescript.png" alt="CoffeeScript logo" />
+            <img src="assets/icons/lastpass.png" alt="LastPass logo" />
+            <img src="assets/icons/javascript.png" alt="JavaScript logo" />
+            <img src="assets/icons/trello.png" alt="Trello logo" />
+            <img src="assets/icons/twilio.png" alt="Twilio logo" />
+            <img src="assets/icons/coffeescript.png" alt="CoffeeScript logo" />
             <i class="devicon-sass-original colored"></i>
-            <img src="img/icons/postgresql.png" alt="PostgreSQL logo" />
+            <img src="assets/icons/postgresql.png" alt="PostgreSQL logo" />
             <i class="devicon-express-original colored"></i>
-            <img src="img/icons/heroku.png" alt="Heroku logo" />
-            <img src="img/icons/stackoverflow.png" alt="Stack Overflow logo" />
-            <img src="img/icons/mongodb.png" alt="MongoDB logo" />
+            <img src="assets/icons/heroku.png" alt="Heroku logo" />
+            <img
+              src="assets/icons/stackoverflow.png"
+              alt="Stack Overflow logo"
+            />
+            <img src="assets/icons/mongodb.png" alt="MongoDB logo" />
             <i class="devicon-react-original colored"></i>
             <i class="devicon-meteor-plain-wordmark colored"></i>
-            <img src="img/icons/stripe.png" alt="Stripe logo" />
-            <img src="img/icons/css3.png" alt="CSS3 logo logo" />
-            <img src="img/icons/slack.png" alt="Slack logo" />
-            <img src="img/icons/firebase.png" alt="Firebase logo" />
+            <img src="assets/icons/stripe.png" alt="Stripe logo" />
+            <img src="assets/icons/css3.png" alt="CSS3 logo logo" />
+            <img src="assets/icons/slack.png" alt="Slack logo" />
+            <img src="assets/icons/firebase.png" alt="Firebase logo" />
             <img
-              src="img/icons/styledcomponents.png"
+              src="assets/icons/styledcomponents.png"
               alt="Styled Components logo"
             />
-            <img src="img/icons/github.png" alt="GitHub logo" />
-            <img src="img/icons/nodejs.png" alt="Node.js logo" />
-            <img src="img/icons/html5.png" alt="HTML5 logo" />
-            <img src="img/icons/git.png" alt="Git logo" />
+            <img src="assets/icons/github.png" alt="GitHub logo" />
+            <img src="assets/icons/nodejs.png" alt="Node.js logo" />
+            <img src="assets/icons/html5.png" alt="HTML5 logo" />
+            <img src="assets/icons/git.png" alt="Git logo" />
             <i class="devicon-typescript-plain colored"></i>
           </div>
           <h3>...and more!</h3>
@@ -147,11 +154,17 @@
             <div class="cards">
               <div class="card active-card" data-slide="1">
                 <div class="card-wrapper">
-                  <div class="img-wrapper">
-                    <img
-                      src="img/recaller.gif"
-                      alt="Animated demo of Recaller website"
-                    />
+                  <div class="vid-wrapper">
+                    <video preload='auto' autoplay muted playsinline>
+                      <source
+                        src="assets/videos/recaller.webm"
+                        type="video/webm"
+                      />
+                      <sourc
+                        src="assets/videos/recaller.mp4"
+                        type="video/mp4"
+                      >
+                    </video>
                   </div>
                   <h2>
                     <a
@@ -167,20 +180,20 @@
                     </h3>
                     <div>
                       <i class="fab fa-react"></i>&nbsp;<img
-                        src="img/icons/styledcomponents.png"
+                        src="assets/icons/styledcomponents.png"
                         alt="Styled Components logo"
                       />&nbsp;<img
-                        src="img/icons/firebase.png"
+                        src="assets/icons/firebase.png"
                         alt="Firebase logo"
                       />&nbsp;<img
-                        src="img/icons/nodejs.png"
+                        src="assets/icons/nodejs.png"
                         alt="Node.js logo"
                       />&nbsp;<i class="devicon-express-original colored"></i
                       >&nbsp;<img
-                        src="img/icons/twilio.png"
+                        src="assets/icons/twilio.png"
                         alt="Twilio logo"
                       />&nbsp;<img
-                        src="img/icons/stripe.png"
+                        src="assets/icons/stripe.png"
                         alt="Stripe logo"
                       />
                     </div>
@@ -200,11 +213,17 @@
               </div>
               <div class="card" data-slide="2">
                 <div class="card-wrapper">
-                  <div class="img-wrapper">
-                    <img
-                      src="img/graffiti.gif"
-                      alt="Animated demo of Graffiti Wall website"
-                    />
+                  <div class="vid-wrapper">
+                    <video autoplay muted playsinline>
+                      <source
+                        src="assets/videos/graffiti.webm"
+                        type="video/webm"
+                      />
+                      <sourc
+                        src="assets/videos/graffiti.mp4"
+                        type="video/mp4"
+                      >
+                    </video>
                   </div>
                   <h2>
                     <a
@@ -218,7 +237,7 @@
                     <h3>Tech Used:</h3>
                     <div>
                       <i class="fab fa-react"></i>&nbsp;<img
-                        src="img/icons/styledcomponents.png"
+                        src="assets/icons/styledcomponents.png"
                         alt="Styled Components logo"
                       />
                     </div>
@@ -237,12 +256,18 @@
               </div>
               <div class="card" data-slide="3">
                 <div class="card-wrapper">
-                  <div class="img-wrapper">
-                    <img
-                      src="img/productqueue.gif"
-                      alt="Animated demo of Product Queue website"
-                    />
-                  </div>
+                  <div class="vid-wrapper">
+                      <video autoplay muted playsinline>
+                        <source
+                          src="assets/videos/productqueue.webm"
+                          type="video/webm"
+                        />
+                        <sourc
+                          src="assets/videos/productqueue.mp4"
+                          type="video/mp4"
+                        >
+                      </video>
+                    </div>
                   <h2>
                     <a
                       href="https://productqueue.netlify.com//"
@@ -255,11 +280,11 @@
                     <h3>Tech Used:</h3>
                     <div>
                       <img
-                        src="img/icons/nodejs.png"
+                        src="assets/icons/nodejs.png"
                         alt="Node.js logo"
                       />&nbsp;<i class="devicon-express-original colored"></i
                       >&nbsp;<img
-                        src="img/icons/postgresql.png"
+                        src="assets/icons/postgresql.png"
                         alt="PostgreSQL logo"
                       />&nbsp;<i class="devicon-react-original colored"></i>
                     </div>
@@ -278,12 +303,18 @@
               </div>
               <div class="card" data-slide="4">
                 <div class="card-wrapper">
-                  <div class="img-wrapper">
-                    <img
-                      src="img/onboarding.gif"
-                      alt="Animated demo of FlexTogether Onboarding website"
-                    />
-                  </div>
+                  <div class="vid-wrapper">
+                      <video autoplay muted playsinline>
+                        <source
+                          src="assets/videos/onboarding.webm"
+                          type="video/webm"
+                        />
+                        <sourc
+                          src="assets/videos/onboarding.mp4"
+                          type="video/mp4"
+                        >
+                      </video>
+                    </div>
                   <h2>
                     <a
                       href="https://kevins-task-list.netlify.com/"
@@ -312,9 +343,18 @@
               </div>
               <div class="card" data-slide="4">
                 <div class="card-wrapper">
-                  <div class="img-wrapper">
-                    <img src="img/gsd.gif" alt="Animated demo of GSD website" />
-                  </div>
+                  <div class="vid-wrapper">
+                      <video autoplay muted playsinline>
+                        <source
+                          src="assets/videos/gsd.webm"
+                          type="video/webm"
+                        />
+                        <sourc
+                          src="assets/videos/gsd.mp4"
+                          type="video/mp4"
+                        >
+                      </video>
+                    </div>
                   <h2>
                     <a
                       href="https://kevins-task-list.netlify.com/"

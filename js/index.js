@@ -224,3 +224,20 @@ class Carousel {
 const carousel = new Carousel(document.querySelector('.card-carousel'));
 
 // End Carousel
+
+// Adding a delay to the loop on videos
+
+const videos = document.querySelectorAll('video');
+
+videos.forEach(video =>
+  video.addEventListener(
+    'ended',
+    e =>
+      setTimeout(() => {
+        video.play();
+      }, 3000),
+    false,
+  ),
+);
+
+// Delay done!
